@@ -11,7 +11,12 @@ module.exports = {
         manrope: ["Manrope", "sans-serif"],
         lexend: ["Lexend", "sans-serif"],
         sourceSans: [`"Source Sans 3"`, "sans-serif"],
-        JakartaSans: [`"Plus Jakarta Sans"`, "sans-serif"],
+        akrobat: ["Akrobat", "sans-serif"],
+      },
+      colors: {
+        "logo-main": "#fa7b15",
+        "logo-secondary": "#038aff",
+        "logo-tertiary": "#260e00",
       },
     },
   },

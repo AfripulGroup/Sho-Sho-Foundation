@@ -90,37 +90,51 @@
   <body>
     <section class="bg-gray-100 container-fluid px-auto transition-all">
       <!-- Navigation Bar -->
-      <nav class="bg-blue-600 py-4 px-4 max-md:pl-0 max-md:pr-4">
+      <nav class="bg-blue-600 py-4 px-4 max-md:px-2">
         <div class="container mx-auto flex justify-between items-center">
           <!-- Logo -->
-          <a href="#" class="text-white text-2xl font-bold"
-            >Sho Sho Foundation</a
-          >
+          <a href="/index.html">
+            <img
+              src="/images/logo-white.png"
+              alt="Sho Sho Foundation Logo"
+              class="h-12 w-auto"
+            />
+          </a>
 
           <!-- Desktop Menu -->
           <ul id="menu" class="flex max-md:hidden space-x-6 text-white">
             <li>
-              <a href="/index.html" class="hover:text-gray-200 transition"
+              <a
+                href="/index.html"
+                class="hover:text-logo-tertiary transition font-medium active"
                 >Home</a
               >
             </li>
             <li>
-              <a href="/about.html" class="hover:text-gray-200 transition"
+              <a
+                href="/about.html"
+                class="hover:text-logo-tertiary transition font-medium"
                 >About</a
               >
             </li>
             <li>
-              <a href="/gallery.html" class="hover:text-gray-200 transition"
+              <a
+                href="/gallery.html"
+                class="hover:text-logo-tertiary transition font-medium"
                 >Gallery</a
               >
             </li>
             <li>
-              <a href="/donation.html" class="hover:text-gray-200 transition"
+              <a
+                href="/donation.html"
+                class="hover:text-logo-tertiary transition font-medium"
                 >Donations</a
               >
             </li>
             <li>
-              <a href="/contact.html" class="hover:text-gray-200 transition"
+              <a
+                href="/contact.html"
+                class="hover:text-logo-tertiary transition font-medium"
                 >Contact</a
               >
             </li>
@@ -158,27 +172,37 @@
           <div class="border-t border-white/25 -700 my-1"></div>
 
           <li>
-            <a href="/index.html" class="hover:text-gray-200 transition"
+            <a
+              href="/index.html"
+              class="hover:text-logo-tertiary transition font-medium active"
               >Home</a
             >
           </li>
           <li>
-            <a href="/about.html" class="hover:text-gray-200 transition"
+            <a
+              href="/about.html"
+              class="hover:text-logo-tertiary transition font-medium"
               >About</a
             >
           </li>
           <li>
-            <a href="/gallery.html" class="hover:text-gray-200 transition"
+            <a
+              href="/gallery.html"
+              class="hover:text-logo-tertiary transition font-medium"
               >Gallery</a
             >
           </li>
           <li>
-            <a href="/donation.html" class="hover:text-gray-200 transition"
+            <a
+              href="/donation.html"
+              class="hover:text-logo-tertiary transition font-medium"
               >Donations</a
             >
           </li>
           <li>
-            <a href="/contact.html" class="hover:text-gray-200 transition"
+            <a
+              href="/contact.html"
+              class="hover:text-logo-tertiary transition font-medium"
               >Contact</a
             >
           </li>
@@ -186,7 +210,7 @@
       </nav>
 
       <!-- Hero Carousel -->
-      <section class="splide relative" id="hero-carousel">
+      <section class="splide relative mb-14" id="hero-carousel">
         <!-- Display Text -->
         <div
           class="container-fluid text-center text-white absolute inset-0 flex z-10 items-center justify-center bg-black bg-opacity-50"
@@ -202,13 +226,13 @@
             <div class="flex justify-center align-center gap-3 space-x-3">
               <a
                 href="#pastEvents"
-                class="bg-yellow-500 px-6 py-3 rounded-full text-lg transition transform hover:scale-105"
+                class="bg-logo-main font-semibold px-6 py-3 rounded-full text-lg transition transform hover:scale-105"
               >
                 Explore
               </a>
               <a
                 href="about.html"
-                class="bg-yellow-500 px-6 py-3 rounded-full text-lg transition transform hover:scale-105"
+                class="bg-logo-tertiary font-semibold px-6 py-3 rounded-full text-lg transition transform hover:scale-105"
               >
                 Learn More
               </a>
@@ -221,33 +245,33 @@
             <!-- Slide 1 -->
             <li class="splide__slide relative">
               <img
-                src="https://picsum.photos/2400"
+                src="/images/gallery_image (10).webp"
                 alt="Hero 1"
-                class="w-full h-screen object-cover"
+                class="w-full h-dvh object-cover"
               />
             </li>
             <!-- Slide 2 -->
             <li class="splide__slide">
               <img
-                src="https://picsum.photos/2410"
+                src="/images/gallery_image (12).webp"
                 alt="Hero 2"
-                class="w-full h-screen object-cover"
+                class="w-full h-dvh object-cover"
               />
             </li>
             <!-- Slide 3 -->
             <li class="splide__slide">
               <img
-                src="https://picsum.photos/2411"
+                src="/images/gallery_image (2).webp"
                 alt="Hero 3"
-                class="w-full h-screen object-cover"
+                class="w-full h-dvh object-cover"
               />
             </li>
             <!-- Slide 4 -->
             <li class="splide__slide">
               <img
-                src="https://picsum.photos/2412"
+                src="/images/gallery_image (3).webp"
                 alt="Hero 4"
-                class="w-full h-screen object-cover"
+                class="w-full h-dvh object-cover"
               />
             </li>
           </ul>
@@ -255,8 +279,8 @@
       </section>
 
       <!--Past  Event Section with Scroll Animation -->
-      <section class="container mx-auto px-4 py-12" id="pastEvents">
-        <h2 class="text-3xl font-bold text-center mb-8 text-yellow-600">
+      <section class="container mx-auto px-4 py-12 my-14" id="pastEvents">
+        <h2 class="text-3xl font-bold text-center mb-8 text-logo-main">
           Past Events
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -266,15 +290,15 @@
           >
             <div class="w-full h-64 overflow-hidden rounded-t-lg flex-shrink-0">
               <img
-                src="https://picsum.photos/1500/2000"
+                src="/images/gallery_image (2).webp"
                 alt="Event 1"
                 class="object-cover object-center w-full h-full"
               />
             </div>
             <div class="flex flex-col flex-grow mt-4">
-              <h3 class="text-xl font-semibold mb-2">Charity Walk</h3>
+              <h3 class="text-xl font-semibold mb-2">Visit to Vio dada</h3>
               <p class="text-gray-700 flex-grow">
-                Join us for our annual charity walk to support local children.
+                Visitation to the Orphanage home at Vio dada
               </p>
             </div>
           </div>
@@ -285,15 +309,17 @@
           >
             <div class="w-full h-64 overflow-hidden rounded-t-lg flex-shrink-0">
               <img
-                src="https://picsum.photos/1900/700"
+                src="/images/gallery_image (12).webp"
                 alt="Event 2"
                 class="object-cover object-center w-full h-full"
               />
             </div>
             <div class="flex flex-col flex-grow mt-4">
-              <h3 class="text-xl font-semibold mb-2">Food Drive</h3>
+              <h3 class="text-xl font-semibold mb-2">
+                September Orphanage Visitation
+              </h3>
               <p class="text-gray-700 flex-grow">
-                Help us collect and distribute food to those in need.
+                Visit to an orphanage called La solution at Adetikope.
               </p>
             </div>
           </div>
@@ -304,7 +330,7 @@
           >
             <div class="w-full h-64 overflow-hidden rounded-t-lg flex-shrink-0">
               <img
-                src="https://picsum.photos/1750"
+                src="/images/gallery_image (21).webp"
                 alt="Event 3"
                 class="object-cover object-center w-full h-full"
               />
@@ -312,7 +338,7 @@
             <div class="flex flex-col flex-grow mt-4">
               <h3 class="text-xl font-semibold mb-2">Education Fundraiser</h3>
               <p class="text-gray-700 flex-grow">
-                Support education for underprivileged children.
+                Donate school materials to Four different Orphanage.
               </p>
             </div>
           </div>
@@ -320,8 +346,8 @@
       </section>
 
       <!-- Upcoming Event Section with Scroll Animation -->
-      <section class="container mx-auto px-4 py-12">
-        <h2 class="text-3xl font-bold text-center mb-8 text-yellow-600">
+      <section class="container mx-auto px-4 py-12 my-14">
+        <h2 class="text-3xl font-bold text-center mb-8 text-logo-main">
           Upcoming Events
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -331,21 +357,21 @@
           >
             <div class="w-full h-64 overflow-hidden rounded-t-lg flex-shrink-0">
               <img
-                src="https://picsum.photos/1500/2000"
+                src="/images/about-hero-image.jpg"
                 alt="Event 1"
                 class="object-cover object-center w-full h-full"
               />
             </div>
             <div class="flex flex-col flex-grow mt-4">
-              <h3 class="text-xl font-semibold mb-2">Charity Walk</h3>
+              <h3 class="text-xl font-semibold mb-2">Learning opportunity</h3>
               <p class="text-gray-700 flex-grow">
-                Join us for our annual charity walk to support local children.
+                Offering english lecture for orphanage homes.
               </p>
             </div>
           </div>
 
           <!-- Event Card 2 -->
-          <div
+          <!-- <div
             class="event-card bg-white p-6 rounded-lg shadow-lg flex flex-col h-full transition-all duration-700"
           >
             <div class="w-full h-64 overflow-hidden rounded-t-lg flex-shrink-0">
@@ -361,23 +387,24 @@
                 Help us collect and distribute food to those in need.
               </p>
             </div>
-          </div>
+          </div> -->
 
           <!-- Event Card 3 -->
           <div
-            class="event-card bg-white p-6 rounded-lg shadow-lg flex flex-col h-full transition-all duration-700"
+            class="event-card bg-white p-6 rounded-lg shadow-lg flex flex-col h-full col-start-3 transition-all duration-700"
           >
             <div class="w-full h-64 overflow-hidden rounded-t-lg flex-shrink-0">
               <img
-                src="https://picsum.photos/1750"
+                src="/images/gallery_image (60).webp"
                 alt="Event 3"
                 class="object-cover object-center w-full h-full"
               />
             </div>
             <div class="flex flex-col flex-grow mt-4">
-              <h3 class="text-xl font-semibold mb-2">Education Fundraiser</h3>
+              <h3 class="text-xl font-semibold mb-2">Leadership training</h3>
               <p class="text-gray-700 flex-grow">
-                Support education for underprivileged children.
+                Training orphans on the mindset of being leaders and not give
+                up.
               </p>
             </div>
           </div>
@@ -385,8 +412,8 @@
       </section>
 
       <!-- Team quote slideshows  -->
-      <section class="container mx-auto px-4 py-8" data-aos="fade-up">
-        <h2 class="text-3xl font-bold text-center mb-6 text-yellow-600">
+      <section class="container mx-auto px-4 py-8 my-14" data-aos="fade-up">
+        <h2 class="text-3xl font-bold text-center mb-6 text-logo-main">
           A Word from Our Founder
         </h2>
         <section class="splide" id="team-quote-slider">
@@ -399,21 +426,21 @@
                 >
                   <div class="text-4xl mb-4">“</div>
                   <p class="text-gray-700 mb-4 italic">
-                    "Our mission is to uplift communities and inspire change.
-                    Together, we can make a difference!"
+                    "If it is in your heart, the resources would be placed in
+                    your hands."
                   </p>
-                  <h4 class="text-lg font-semibold text-yellow-600 mb-2">
-                    - [Founder Name]
+                  <h4 class="text-lg font-semibold text-logo-main mb-2">
+                    - Olabisi Shodunke
                   </h4>
                   <img
-                    src="https://picsum.photos/650"
+                    src="/images/founder profile 2.jpg"
                     alt="Founder"
-                    class="rounded-full h-24 w-24 object-cover"
+                    class="rounded-full h-24 w-24 object-cover object-top"
                   />
                 </div>
               </li>
               <!-- Additional Quotes (Repeat Structure) -->
-              <li class="splide__slide">
+              <!-- <li class="splide__slide">
                 <div
                   class="bg-white p-6 rounded-lg shadow-lg text-center flex flex-col items-center h-full"
                 >
@@ -422,7 +449,7 @@
                     "Empowering people is our greatest achievement. Every action
                     counts."
                   </p>
-                  <h4 class="text-lg font-semibold text-yellow-600 mb-2">
+                  <h4 class="text-lg font-semibold text-logo-main mb-2">
                     - [Other Leader]
                   </h4>
                   <img
@@ -431,15 +458,15 @@
                     class="rounded-full h-24 w-24 object-cover"
                   />
                 </div>
-              </li>
+              </li> -->
             </ul>
           </div>
         </section>
       </section>
 
       <!-- Testimonials  -->
-      <section class="container mx-auto px-4 py-8" data-aos="fade-up">
-        <h2 class="text-3xl font-bold text-center mb-6 text-yellow-600">
+      <section class="container mx-auto px-4 py-8 my-14" data-aos="fade-up">
+        <h2 class="text-3xl font-bold text-center mb-6 text-logo-main">
           Testimonials
         </h2>
         <section class="splide" id="testimonial-slider">
@@ -463,7 +490,7 @@
                       their support!"
                     </p>
                   </div>
-                  <h4 class="text-lg font-semibold text-yellow-600">
+                  <h4 class="text-lg font-semibold text-logo-main">
                     - Jane Doe
                   </h4>
                 </div>
@@ -486,7 +513,7 @@
                       "Amazing work! They truly care about making a difference."
                     </p>
                   </div>
-                  <h4 class="text-lg font-semibold text-yellow-600">
+                  <h4 class="text-lg font-semibold text-logo-main">
                     - John Smith
                   </h4>
                 </div>
@@ -510,7 +537,7 @@
                       recommended!"
                     </p>
                   </div>
-                  <h4 class="text-lg font-semibold text-yellow-600">
+                  <h4 class="text-lg font-semibold text-logo-main">
                     - Alex Johnson
                   </h4>
                 </div>
@@ -526,7 +553,7 @@
         class="container mx-auto px-4 py-12 bg-yellow-100 text-center rounded-lg shadow-md"
         data-aos="fade-up"
       >
-        <h2 class="text-4xl font-bold mb-4 text-yellow-600">
+        <h2 class="text-4xl font-bold mb-4 text-logo-main">
           Make a Difference Today
         </h2>
         <p class="text-gray-700 mb-6 text-lg max-w-xl mx-auto">
@@ -535,15 +562,15 @@
         </p>
         <a
           href="/donate"
-          class="bg-yellow-600 text-white py-3 px-6 rounded-full text-lg font-semibold transition hover:bg-yellow-700"
+          class="bg-logo-main text-white py-3 px-6 rounded-full text-lg font-semibold transition hover:bg-yellow-700"
         >
           Donate Now
         </a>
       </section>
 
       <!-- Partners Logo carousel -->
-      <section class="container mx-auto px-4 py-8" data-aos="fade-up">
-        <h2 class="text-3xl font-bold text-center mb-6 text-yellow-600">
+      <section class="container mx-auto px-4 py-8 my-14" data-aos="fade-up">
+        <h2 class="text-3xl font-bold text-center mb-6 text-logo-main">
           Our Partners
         </h2>
         <section class="splide" id="partner-slider">
@@ -552,72 +579,72 @@
               <!-- Partner Logo 1 -->
               <li class="splide__slide flex justify-center">
                 <img
-                  src="https://picsum.photos/200/80"
+                  src="/images/logo-white.png"
                   alt="Partner 1"
-                  class="object-contain h-20 w-40 mx-4"
+                  class="object-contain h-20 w-40 mx-4 grayscale hover:scale-105 hover:grayscale-0"
                 />
               </li>
               <!-- Partner Logo 2 -->
               <li class="splide__slide flex justify-center">
                 <img
-                  src="https://picsum.photos/200/80"
+                  src="/images/logo-white.png"
                   alt="Partner 2"
-                  class="object-contain h-20 w-40 mx-4"
+                  class="object-contain h-20 w-40 mx-4 grayscale hover:scale-105 hover:grayscale-0"
                 />
               </li>
               <!-- Partner Logo 3 -->
               <li class="splide__slide flex justify-center">
                 <img
-                  src="https://picsum.photos/200/80"
+                  src="/images/logo-white.png"
                   alt="Partner 3"
-                  class="object-contain h-20 w-40 mx-4"
+                  class="object-contain h-20 w-40 mx-4 grayscale hover:scale-105 hover:grayscale-0"
                 />
               </li>
               <!-- Partner Logo 1 -->
               <li class="splide__slide flex justify-center">
                 <img
-                  src="https://picsum.photos/200/80"
+                  src="/images/logo-white.png"
                   alt="Partner 1"
-                  class="object-contain h-20 w-40 mx-4"
+                  class="object-contain h-20 w-40 mx-4 grayscale hover:scale-105 hover:grayscale-0"
                 />
               </li>
               <!-- Partner Logo 2 -->
               <li class="splide__slide flex justify-center">
                 <img
-                  src="https://picsum.photos/200/80"
+                  src="/images/logo-white.png"
                   alt="Partner 2"
-                  class="object-contain h-20 w-40 mx-4"
+                  class="object-contain h-20 w-40 mx-4 grayscale hover:scale-105 hover:grayscale-0"
                 />
               </li>
               <!-- Partner Logo 3 -->
               <li class="splide__slide flex justify-center">
                 <img
-                  src="https://picsum.photos/200/80"
+                  src="/images/logo-white.png"
                   alt="Partner 3"
-                  class="object-contain h-20 w-40 mx-4"
+                  class="object-contain h-20 w-40 mx-4 grayscale hover:scale-105 hover:grayscale-0"
                 />
               </li>
               <li class="splide__slide flex justify-center">
                 <img
-                  src="https://picsum.photos/200/80"
+                  src="/images/logo-white.png"
                   alt="Partner 1"
-                  class="object-contain h-20 w-40 mx-4"
+                  class="object-contain h-20 w-40 mx-4 grayscale hover:scale-105 hover:grayscale-0"
                 />
               </li>
               <!-- Partner Logo 2 -->
               <li class="splide__slide flex justify-center">
                 <img
-                  src="https://picsum.photos/200/80"
+                  src="/images/logo-white.png"
                   alt="Partner 2"
-                  class="object-contain h-20 w-40 mx-4"
+                  class="object-contain h-20 w-40 mx-4 grayscale hover:scale-105 hover:grayscale-0"
                 />
               </li>
               <!-- Partner Logo 3 -->
               <li class="splide__slide flex justify-center">
                 <img
-                  src="https://picsum.photos/200/80"
+                  src="/images/logo-white.png"
                   alt="Partner 3"
-                  class="object-contain h-20 w-40 mx-4"
+                  class="object-contain h-20 w-40 mx-4 grayscale hover:scale-105 hover:grayscale-0"
                 />
               </li>
               <!-- Add more partner logos as needed -->
@@ -627,7 +654,7 @@
       </section>
 
       <!-- FAQ Section -->
-      <section id="faq" class="bg-gray-100 py-12" data-aos="fade-in">
+      <section id="faq" class="bg-gray-100 py-12 my-14" data-aos="fade-in">
         <div class="container mx-auto px-4">
           <h2 class="text-2xl font-bold text-center mb-8">
             Frequently Asked Questions
@@ -690,7 +717,12 @@
           <div class="flex flex-col gap-7 md:flex-row justify-between">
             <!-- Website Info -->
             <div class="mb-6 md:mb-0 w-full md:w-1/3">
-              <h3 class="text-xl font-bold mb-2">Sho Sho Foundation</h3>
+              <img
+                src="/images/logo-white.png"
+                alt="Sho Sho Foundation Logo"
+                class="w-48 h-24 scale-[2]"
+              />
+              <h3 class="text-xl font-bold mb-2 -mt-4">Sho Sho Foundation</h3>
               <p class="text-gray-400">Impacting Lives, Meeting Needs.</p>
             </div>
 
@@ -776,7 +808,7 @@
                   <button
                     type="submit"
                     onclick="handleSubscriberSubmit(event)"
-                    class="bg-yellow-500 hover:bg-yellow-600 text-white p-2 rounded-r-md"
+                    class="bg-logo-main hover:bg-logo-main/90 text-white p-2 rounded-r-md"
                   >
                     Subscribe
                   </button>
@@ -793,7 +825,14 @@
             class="flex flex-col md:flex-row justify-between text-gray-400 text-sm space-y-3"
           >
             <p>&copy; 2024 Sho Sho Foundation. All rights reserved.</p>
-            <p>Designed by <span class="text-blue-500">Afripul Group</span></p>
+            <p>
+              Designed by
+              <a
+                href="https://afripulgroup.com"
+                class="text-blue-500 no-underline hover:underline-"
+                >Afripul Group</a
+              >
+            </p>
           </div>
         </div>
       </footer>
