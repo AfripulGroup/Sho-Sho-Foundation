@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      property="og:title"
+      content="About Sho Sho Foundation - Our Mission and Vision"
+    />
+    <meta
+      property="og:description"
+      content="Learn more about Sho Sho Foundation's mission to empower communities through education and support."
+    />
+    <meta property="og:url" content="https://example.com/about.html" />
+    <meta
+      property="og:image"
+      content="https://example.com/images/about-og.jpg"
+    />
+
+    <meta
+      name="twitter:title"
+      content="About Sho Sho Foundation - Our Mission and Vision"
+    />
+    <meta
+      name="twitter:description"
+      content="Learn more about Sho Sho Foundation's mission to empower communities through education and support."
+    />
+    <meta
+      name="twitter:image"
+      content="https://example.com/images/about-twitter.jpg"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://example.com/about.html"
+        },
+        "name": "About Sho Sho Foundation",
+        "description": "Discover Sho Sho Foundation's mission, vision, and the impact we aim to create in communities.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Sho Sho Foundation",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://example.com/images/logo.png"
+          }
+        }
+      }
+    </script>
+
+    <title>About Us - Sho Sho Foundation</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+
+    <!-- Splide.js CSS -->
+    <script src="
+  https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
+  "></script>
+    <link
+      href="
+  https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
+  "
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/41222511d0.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Add Toastify.js CDN for Toast Notifications -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+
+  <body>
+    <main class="bg-gray-100 container-fluid px-auto transition-all">
+      <!-- Navigation Bar -->
+      <nav class="bg-blue-600 py-4 px-4 md:pl-0 md:pr-4">
+        <div class="container mx-auto flex justify-between items-center">
+          <!-- Logo -->
+          <a href="#" class="text-white text-2xl font-bold"
+            >Sho Sho Foundation</a
+          >
+
+          <!-- Desktop Menu -->
+          <ul id="menu" class="md:flex hidden space-x-6 text-white">
+            <li>
+              <a href="/index.html" class="hover:text-gray-200 transition"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="/about.html" class="hover:text-gray-200 transition"
+                >About</a
+              >
+            </li>
+            <li>
+              <a href="/gallery.html" class="hover:text-gray-200 transition"
+                >Gallery</a
+              >
+            </li>
+            <li>
+              <a href="/donation.html" class="hover:text-gray-200 transition"
+                >Donations</a
+              >
+            </li>
+            <li>
+              <a href="/contact.html" class="hover:text-gray-200 transition"
+                >Contact</a
+              >
+            </li>
+          </ul>
+
+          <!-- Mobile Menu Toggle Button -->
+          <button
+            type="button"
+            id="menu-toggle"
+            class="md:hidden text-white focus:outline-none"
+          >
+            <!-- Hamburger Icon -->
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Menu (Initially Hidden) -->
+        <ul
+          id="mobile-menu"
+          class="md:hidden flex-col items-center text-white space-y-4"
+        >
+          <div class="border-t border-white/25 -700 my-1"></div>
+
+          <li>
+            <a href="/index.html" class="hover:text-gray-200 transition"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="/about.html" class="hover:text-gray-200 transition"
+              >About</a
+            >
+          </li>
+          <li>
+            <a href="/gallery.html" class="hover:text-gray-200 transition"
+              >Gallery</a
+            >
+          </li>
+          <li>
+            <a href="/donation.html" class="hover:text-gray-200 transition"
+              >Donations</a
+            >
+          </li>
+          <li>
+            <a href="/contact.html" class="hover:text-gray-200 transition"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!-- About Section -->
+      <section class="py-16" data-aos="fade-up">
+        <div class="container mx-auto text-center">
+          <h2 class="text-4xl font-bold text-yellow-600 mb-6">About Us</h2>
+          <p class="text-lg text-gray-700 max-w-4xl mx-auto mb-8">
+            Sho Sho Foundation is a &#40;NGO &#41; charity organization that try
+            to help people as much as we possibly can with our facilities. We
+            aim to improve social well-being and philanthropy and are also
+            committed to helping children and their families who are in need. We
+            are transparent and open in relationships,striving to meet the
+            highest ethical standards, treating all people with dignity and
+            respect. We also ensure that everyone has the opportunity to live
+            their full potentials by instilling discipline, biblical teachings
+            and moral values.
+          </p>
+          <img
+            src="https://via.placeholder.com/600x300"
+            alt="About Image"
+            class="mx-auto rounded-lg shadow-lg"
+          />
+        </div>
+      </section>
+
+      <!-- Our History Section -->
+      <section class="py-12 text-center bg-white" data-aos="fade-up">
+        <h2 class="text-3xl font-bold mb-4 text-yellow-600">Our History</h2>
+        <p class="text-gray-700 max-w-3xl mx-auto">
+          Founded with a mission to serve, Sho Sho Foundation has grown from a
+          small initiative into a beacon of hope for many.
+        </p>
+      </section>
+
+      <!-- How It All Started Section -->
+      <section class="py-12 bg-gray-100 text-center" data-aos="fade-up">
+        <h2 class="text-3xl font-bold mb-4 text-yellow-600">
+          How It All Started
+        </h2>
+        <p class="text-gray-700 max-w-3xl mx-auto">
+          It all began with a simple idea: to create a positive impact by
+          bringing people together for a common cause.
+        </p>
+      </section>
+
+      <!-- Mission and Values Section -->
+      <section class="py-12 bg-white overflow-clip">
+        <div
+          class="container mx-auto px-6 flex flex-col md:flex-row justify-between gap-5"
+        >
+          <!-- Mission -->
+          <div
+            class="w-full md:w-1/2 mb-8 md:mb-0 flex flex-col items-start"
+            data-aos="fade-up"
+          >
+            <h3 class="text-3xl font-bold mb-4 text-yellow-600">Our Mission</h3>
+            <p class="text-gray-700 text-balance">
+              The SHO SHO Helping Hands Foundation is dedicated to nurturing the
+              spiritual, emotional, and physical well-being of children in
+              orphanages. We provide for their basic needs and offer financial
+              support to ensure every child has access to education.
+            </p>
+            <p class="text-gray-700 text-balance">
+              Additionally, we provide life skills training and personal
+              development opportunities. While supporting their practical needs,
+              we also guide them in developing a personal relationship with God,
+              helping them experience the joy and comfort of faith.
+            </p>
+            <p class="text-gray-700 text-balance">
+              Additionally, we provide life skills training and personal
+              development opportunities. While supporting their practical needs,
+              we also guide them in developing a personal relationship with God,
+              helping them experience the joy and comfort of faith.
+            </p>
+          </div>
+          <!-- Vission -->
+          <div
+            class="w-full md:w-1/2 mb-8 md:mb-0 flex flex-col items-end text-right"
+            data-aos="fade-up"
+          >
+            <h3 class="text-3xl font-bold mb-4 text-yellow-600">Our Vission</h3>
+            <p class="text-gray-700 text-balance">
+              To empower orphaned children with education, life skills, and
+              faith, helping them become confident, capable individuals who
+              positively impact their communities.
+            </p>
+            <p class="text-gray-700 text-balance">
+              To empower orphaned children with education, life skills, and
+              faith, helping them become confident, capable individuals who
+              positively impact their communities.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Core Values Section -->
+      <section class="py-12 bg-gray-100" data-aos="fade-up">
+        <h2 class="text-3xl font-bold mb-8 text-yellow-600 text-center">
+          Our Core Values
+        </h2>
+
+        <!-- Core Values Container -->
+        <div
+          class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-gray-700 px-6"
+        >
+          <!-- Divine Presence -->
+          <div class="flex items-start gap-3">
+            <div class="flex justify-center items-center w-14">
+              <i
+                class="fas fa-hands-praying text-yellow-500 text-4xl w-full h-full object-contain"
+              ></i>
+            </div>
+            <div class="flex flex-col flex-1">
+              <h3 class="text-xl font-semibold mb-2">Divine Presence</h3>
+              <p>
+                Bringing divine presence to orphans and teaching people about
+                having relationships with God.
+              </p>
+            </div>
+          </div>
+
+          <!-- Excellence -->
+          <div class="flex items-start gap-3">
+            <div class="flex justify-center items-center w-14">
+              <i
+                class="fas fa-star text-yellow-500 text-4xl w-full h-full object-contain"
+              ></i>
+            </div>
+            <div class="flex flex-col flex-1">
+              <h3 class="text-xl font-semibold mb-2">Excellence</h3>
+              <p>Giving our best to those in need.</p>
+            </div>
+          </div>
+
+          <!-- Sacrifice -->
+          <div class="flex items-start gap-3">
+            <div class="flex justify-center items-center w-14">
+              <i
+                class="fas fa-heart text-yellow-500 text-4xl w-full h-full object-contain"
+              ></i>
+            </div>
+            <div class="flex flex-col flex-1">
+              <h3 class="text-xl font-semibold mb-2">Sacrifice</h3>
+              <p>Serving with the heart of God, whatever the cost.</p>
+            </div>
+          </div>
+
+          <!-- Compassion -->
+          <div class="flex items-start gap-3">
+            <div class="flex justify-center items-center w-14">
+              <i
+                class="fas fa-hand-holding-heart text-yellow-500 text-4xl w-full h-full object-contain"
+              ></i>
+            </div>
+            <div class="flex flex-col flex-1">
+              <h3 class="text-xl font-semibold mb-2">Compassion</h3>
+              <p>Walking with children on their path to redemption.</p>
+            </div>
+          </div>
+
+          <!-- Perseverance -->
+          <div class="flex items-start gap-3">
+            <div class="flex justify-center items-center w-14">
+              <i
+                class="fas fa-child text-yellow-500 text-5xl w-full h-full object-contain"
+              ></i>
+            </div>
+            <div class="flex flex-col flex-1">
+              <h3 class="text-xl font-semibold mb-2">Perseverance</h3>
+              <p>Never giving up on a child.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Meet the Team Section -->
+      <section class="py-12 bg-gray-100" data-aos="fade-up">
+        <h2 class="text-3xl font-bold text-center mb-8 text-yellow-600">
+          Meet the Team
+        </h2>
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 gap-8 container mx-auto px-6"
+        >
+          <!-- Team Member 1 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+            <img
+              src="https://picsum.photos/150"
+              alt="Team Member"
+              class="mx-auto rounded-full mb-4 w-32 h-32 object-cover"
+            />
+            <h4 class="text-xl font-semibold text-yellow-600">Jane Doe</h4>
+            <p class="text-gray-700">Founder & CEO</p>
+          </div>
+
+          <!-- Team Member 2 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+            <img
+              src="https://picsum.photos/151"
+              alt="Team Member"
+              class="mx-auto rounded-full mb-4 w-32 h-32 object-cover"
+            />
+            <h4 class="text-xl font-semibold text-yellow-600">John Smith</h4>
+            <p class="text-gray-700">Program Director</p>
+          </div>
+
+          <!-- Team Member 3 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+            <img
+              src="https://picsum.photos/152"
+              alt="Team Member"
+              class="mx-auto rounded-full mb-4 w-32 h-32 object-cover"
+            />
+            <h4 class="text-xl font-semibold text-yellow-600">Alex Johnson</h4>
+            <p class="text-gray-700">Community Coordinator</p>
+          </div>
+          <!-- Team Member 2 -->
+          <div
+            class="bg-white p-6 rounded-lg col-start-2 shadow-lg text-center"
+          >
+            <img
+              src="https://picsum.photos/151"
+              alt="Team Member"
+              class="mx-auto rounded-full mb-4 w-32 h-32 object-cover"
+            />
+            <h4 class="text-xl font-semibold text-yellow-600">John Smith</h4>
+            <p class="text-gray-700">Program Director</p>
+          </div>
+
+          <!-- Team Member 3 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+            <img
+              src="https://picsum.photos/152"
+              alt="Team Member"
+              class="mx-auto rounded-full mb-4 w-32 h-32 object-cover"
+            />
+            <h4 class="text-xl font-semibold text-yellow-600">Alex Johnson</h4>
+            <p class="text-gray-700">Community Coordinator</p>
+          </div>
+          <!-- Team Member 3 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+            <img
+              src="https://picsum.photos/152"
+              alt="Team Member"
+              class="mx-auto rounded-full mb-4 w-32 h-32 object-cover"
+            />
+            <h4 class="text-xl font-semibold text-yellow-600">Alex Johnson</h4>
+            <p class="text-gray-700">Community Coordinator</p>
+          </div>
+          <!-- Team Member 3 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+            <img
+              src="https://picsum.photos/152"
+              alt="Team Member"
+              class="mx-auto rounded-full mb-4 w-32 h-32 object-cover"
+            />
+            <h4 class="text-xl font-semibold text-yellow-600">Alex Johnson</h4>
+            <p class="text-gray-700">Community Coordinator</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Milestones Section -->
+      <section class="py-12 bg-white" data-aos="fade-up">
+        <h2 class="text-3xl font-bold text-center mb-8 text-yellow-600">
+          Our Impact
+        </h2>
+        <div class="flex justify-around container mx-auto px-6">
+          <div class="text-center">
+            <i class="fas fa-map-marker-alt text-6xl text-yellow-600"></i>
+            <h3 class="text-2xl font-semibold mt-4" id="states-count">0</h3>
+            <p class="text-gray-700">States Reached</p>
+          </div>
+          <div class="text-center">
+            <i class="fas fa-users text-6xl text-yellow-600"></i>
+            <h3 class="text-2xl font-semibold mt-4" id="children-count">0</h3>
+            <p class="text-gray-700">Children Impacted</p>
+          </div>
+          <div class="text-center">
+            <i class="fas fa-heart text-6xl text-yellow-600"></i>
+            <h3 class="text-2xl font-semibold mt-4" id="lives-count">0</h3>
+            <p class="text-gray-700">Lives Changed</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Credits Section -->
+      <section class="py-12 bg-gray-100 text-center" data-aos="fade-up">
+        <h2 class="text-3xl font-bold mb-4 text-yellow-600">Special Thanks</h2>
+        <p class="text-gray-700 max-w-3xl mx-auto mb-8">
+          We are deeply grateful to our volunteers, sponsors, and donors for
+          their unwavering support and dedication.
+        </p>
+        <div class="flex flex-wrap justify-center">
+          <!-- Volunteer Section -->
+          <div class="w-full md:w-1/3 p-4">
+            <h3 class="text-xl font-semibold mb-2 text-yellow-600">
+              Volunteers
+            </h3>
+            <ul class="list-none">
+              <li class="text-gray-700">Emily White</li>
+              <li class="text-gray-700">Mark Lee</li>
+              <li class="text-gray-700">Sophia Brown</li>
+            </ul>
+          </div>
+
+          <!-- Sponsor Section -->
+          <div class="w-full md:w-1/3 p-4">
+            <h3 class="text-xl font-semibold mb-2 text-yellow-600">Sponsors</h3>
+            <ul class="list-none">
+              <li class="text-gray-700">ABC Corp</li>
+              <li class="text-gray-700">XYZ Ltd</li>
+            </ul>
+          </div>
+
+          <!-- Donor Section -->
+          <div class="w-full md:w-1/3 p-4">
+            <h3 class="text-xl font-semibold mb-2 text-yellow-600">Donors</h3>
+            <ul class="list-none">
+              <li class="text-gray-700">Michael Green</li>
+              <li class="text-gray-700">Olivia Martin</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="bg-gray-800 text-white py-12 mt-3">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-col gap-7 md:flex-row justify-between">
+            <!-- Website Info -->
+            <div class="mb-6 md:mb-0 w-full md:w-1/3">
+              <h3 class="text-xl font-bold mb-2">Sho Sho Foundation</h3>
+              <p class="text-gray-400">Impacting Lives, Meeting Needs.</p>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="mb-6 md:mb-0 w-full md:w-1/3">
+              <h4 class="text-lg font-semibold mb-2">Quick Links</h4>
+              <ul class="space-y-5">
+                <li>
+                  <a href="/index.html" class="hover:text-yellow-500 transition"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a href="/about.html" class="hover:text-yellow-500 transition"
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/gallery.html"
+                    class="hover:text-yellow-500 transition"
+                    >Gallery</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/donation.html"
+                    class="hover:text-yellow-500 transition"
+                    >Donations</a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    href="/contact.html"
+                    class="hover:text-yellow-500 transition"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Website Info -->
+            <div class="mb-6 md:mb-0 w-full md:w-1/3">
+              <!-- Social Media Links -->
+              <div class="">
+                <h4 class="text-lg font-semibold mb-2">Follow Us</h4>
+                <div class="flex space-x-4">
+                  <a href="#" class="hover:text-yellow-500 transition"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a href="#" class="hover:text-yellow-500 transition"
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a href="#" class="hover:text-yellow-500 transition"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                  <a href="#" class="hover:text-yellow-500 transition"
+                    ><i class="fab fa-linkedin-in"></i
+                  ></a>
+                </div>
+              </div>
+              <!-- Subscription Section -->
+              <div class="mt-6">
+                <h4 class="text-lg font-semibold mb-2">
+                  Subscribe for Updates
+                </h4>
+                <p class="text-gray-400 mb-2">
+                  Get notified about upcoming events and news!
+                </p>
+                <form
+                  id="subscribeForm"
+                  class="flex rounded-md"
+                  onsubmit="handleSubscriberSubmit(event)"
+                >
+                  <input
+                    type="email"
+                    id="emailInput"
+                    placeholder="Enter your email"
+                    class="p-2 rounded-l-md w-full text-gray-700"
+                    required
+                  />
+                  <button
+                    type="submit"
+                    onclick="handleSubscriberSubmit(event)"
+                    class="bg-yellow-500 hover:bg-yellow-600 text-white p-2 rounded-r-md"
+                  >
+                    Subscribe
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Divider Line -->
+          <div class="border-t border-gray-700 my-6"></div>
+
+          <!-- Credits and Copyright -->
+          <div
+            class="flex flex-col md:flex-row justify-between text-gray-400 text-sm space-y-3"
+          >
+            <p>&copy; 2024 Sho Sho Foundation. All rights reserved.</p>
+            <p>Designed by <span class="text-blue-500">Afripul Group</span></p>
+          </div>
+        </div>
+      </footer>
+
+      <!-- Back to Top Button -->
+      <button
+        id="backToTopBtn"
+        class="hidden w-6 h-6 aspect-square box-content fixed bottom-5 text-center right-5 p-3 bg-blue-600 text-white rounded-full shadow-md transition-opacity hover:bg-blue-700"
+      >
+        <i class="fas fa-arrow-up size-4"></i>
+      </button>
+    </main>
+
+    <!-- Scripts  -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- AOS Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Toastify.js -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/41222511d0.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts/scripts.js"></script>
+    <script>
+      // Function to animate the count-up with dynamic step calculation using Date.now()
+      function animateCountUp(elementId, targetValue, duration) {
+        const element = document.getElementById(elementId);
+        let currentValue = 0;
+        const startTime = Date.now(); // Start time for the count-up
+
+        // Interval function to update the counter value
+        const interval = setInterval(function () {
+          const elapsedTime = Date.now() - startTime; // Calculate elapsed time
+
+          // Calculate the current value based on elapsed time and the target duration
+          currentValue = Math.floor((elapsedTime / duration) * targetValue);
+
+          // Update the counter element with the current value
+          element.innerHTML = currentValue;
+
+          // Stop the animation when the target value is reached
+          if (currentValue >= targetValue) {
+            clearInterval(interval);
+            element.innerHTML = targetValue; // Ensure the final value is set correctly
+          }
+        }, 10); // Update the value every 10ms for smooth animation
+      }
+
+      // Create an Intersection Observer to detect when the elements are in view
+      const observer = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              // If the element is in view, start the count-up animation
+              const elementId = entry.target.id;
+              if (elementId === "states-count") {
+                animateCountUp("states-count", 300, 3000); // 300 states reached in 3 seconds
+              } else if (elementId === "children-count") {
+                animateCountUp("children-count", 3000, 3000); // 3000 children impacted in 3 seconds
+              } else if (elementId === "lives-count") {
+                animateCountUp("lives-count", 500, 3000); // 500 lives changed in 3 seconds
+              }
+
+              // Stop observing the element once the animation starts
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.5, // Trigger when 50% of the element is visible in the viewport
+        }
+      );
+
+      // Start observing the count-up elements
+      window.onload = function () {
+        observer.observe(document.getElementById("states-count"));
+        observer.observe(document.getElementById("children-count"));
+        observer.observe(document.getElementById("lives-count"));
+      };
+    </script>
+  </body>
+</html>

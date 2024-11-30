@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Sho Sho Foundation - Empowering Communities"
+    />
+    <meta
+      property="og:description"
+      content="Join Sho Sho Foundation in transforming lives and empowering communities through education and support."
+    />
+    <meta
+      property="og:image"
+      content="https://example.com/images/home-og.jpg"
+    />
+    <meta property="og:url" content="https://example.com/" />
+    <meta property="og:site_name" content="Sho Sho Foundation" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Sho Sho Foundation - Empowering Communities"
+    />
+    <meta
+      name="twitter:description"
+      content="Join Sho Sho Foundation in transforming lives and empowering communities through education and support."
+    />
+    <meta
+      name="twitter:image"
+      content="https://example.com/images/home-twitter.jpg"
+    />
+    <title>Sho Sho Foundation</title>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Sho Sho Foundation",
+        "url": "https://example.com",
+        "logo": "https://example.com/images/logo.png",
+        "description": "Empowering communities and transforming lives through education and support.",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1234567890",
+          "contactType": "Customer Support",
+          "email": "contact@shosho.org"
+        },
+        "sameAs": [
+          "https://facebook.com/shosho",
+          "https://twitter.com/shosho",
+          "https://instagram.com/shosho"
+        ]
+      }
+    </script>
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+
+    <!-- Splide.js CSS -->
+    <script src="
+  https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
+  "></script>
+    <link
+      href="
+  https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
+  "
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/41222511d0.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Add Toastify.js CDN for Toast Notifications -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+
+  <body>
+    <section class="bg-gray-100 container-fluid px-auto transition-all">
+      <!-- Navigation Bar -->
+      <nav class="bg-blue-600 py-4 px-4 md:pl-0 md:pr-4">
+        <div class="container mx-auto flex justify-between items-center">
+          <!-- Logo -->
+          <a href="#" class="text-white text-2xl font-bold"
+            >Sho Sho Foundation</a
+          >
+
+          <!-- Desktop Menu -->
+          <ul id="menu" class="md:flex hidden space-x-6 text-white">
+            <li>
+              <a href="/index.html" class="hover:text-gray-200 transition"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="/about.html" class="hover:text-gray-200 transition"
+                >About</a
+              >
+            </li>
+            <li>
+              <a href="/gallery.html" class="hover:text-gray-200 transition"
+                >Gallery</a
+              >
+            </li>
+            <li>
+              <a href="/donation.html" class="hover:text-gray-200 transition"
+                >Donations</a
+              >
+            </li>
+            <li>
+              <a href="/contact.html" class="hover:text-gray-200 transition"
+                >Contact</a
+              >
+            </li>
+          </ul>
+
+          <!-- Mobile Menu Toggle Button -->
+          <button
+            type="button"
+            id="menu-toggle"
+            class="md:hidden text-white focus:outline-none"
+          >
+            <!-- Hamburger Icon -->
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Menu (Initially Hidden) -->
+        <ul
+          id="mobile-menu"
+          class="md:hidden flex-col items-center text-white space-y-4"
+        >
+          <div class="border-t border-white/25 -700 my-1"></div>
+
+          <li>
+            <a href="/index.html" class="hover:text-gray-200 transition"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="/about.html" class="hover:text-gray-200 transition"
+              >About</a
+            >
+          </li>
+          <li>
+            <a href="/gallery.html" class="hover:text-gray-200 transition"
+              >Gallery</a
+            >
+          </li>
+          <li>
+            <a href="/donation.html" class="hover:text-gray-200 transition"
+              >Donations</a
+            >
+          </li>
+          <li>
+            <a href="/contact.html" class="hover:text-gray-200 transition"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Hero Carousel -->
+      <section class="splide relative" id="hero-carousel">
+        <!-- Display Text -->
+        <div
+          class="container-fluid text-center text-white absolute inset-0 flex z-10 items-center justify-center bg-black bg-opacity-50"
+        >
+          <div
+            class="container mx-auto flex-col gap-2 items-center justify-center"
+            data-aos="fade-up"
+          >
+            <h2 class="text-5xl font-bold mb-4">
+              Empowering Future Generations
+            </h2>
+            <p class="text-xl mb-8">Impacting lives, meeting needs.</p>
+            <div class="flex justify-center align-center gap-3 space-x-3">
+              <a
+                href="#pastEvents"
+                class="bg-yellow-500 px-6 py-3 rounded-full text-lg transition transform hover:scale-105"
+              >
+                Explore
+              </a>
+              <a
+                href="about.html"
+                class="bg-yellow-500 px-6 py-3 rounded-full text-lg transition transform hover:scale-105"
+              >
+                Learn More
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Hero carousel images -->
+        <div class="splide__track">
+          <ul class="splide__list">
+            <!-- Slide 1 -->
+            <li class="splide__slide relative">
+              <img
+                src="https://picsum.photos/2400"
+                alt="Hero 1"
+                class="w-full h-screen object-cover"
+              />
+            </li>
+            <!-- Slide 2 -->
+            <li class="splide__slide">
+              <img
+                src="https://picsum.photos/2410"
+                alt="Hero 2"
+                class="w-full h-screen object-cover"
+              />
+            </li>
+            <!-- Slide 3 -->
+            <li class="splide__slide">
+              <img
+                src="https://picsum.photos/2411"
+                alt="Hero 3"
+                class="w-full h-screen object-cover"
+              />
+            </li>
+            <!-- Slide 4 -->
+            <li class="splide__slide">
+              <img
+                src="https://picsum.photos/2412"
+                alt="Hero 4"
+                class="w-full h-screen object-cover"
+              />
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!--Past  Event Section with Scroll Animation -->
+      <section class="container mx-auto px-4 py-12" id="pastEvents">
+        <h2 class="text-3xl font-bold text-center mb-8 text-yellow-600">
+          Past Events
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Event Card 1 -->
+          <div
+            class="event-card bg-white p-6 rounded-lg shadow-lg flex flex-col h-full transition-all duration-700"
+          >
+            <div class="w-full h-64 overflow-hidden rounded-t-lg flex-shrink-0">
+              <img
+                src="https://picsum.photos/1500/2000"
+                alt="Event 1"
+                class="object-cover object-center w-full h-full"
+              />
+            </div>
+            <div class="flex flex-col flex-grow mt-4">
+              <h3 class="text-xl font-semibold mb-2">Charity Walk</h3>
+              <p class="text-gray-700 flex-grow">
+                Join us for our annual charity walk to support local children.
+              </p>
+            </div>
+          </div>
+
+          <!-- Event Card 2 -->
+          <div
+            class="event-card bg-white p-6 rounded-lg shadow-lg flex flex-col h-full transition-all duration-700"
+          >
+            <div class="w-full h-64 overflow-hidden rounded-t-lg flex-shrink-0">
+              <img
+                src="https://picsum.photos/1900/700"
+                alt="Event 2"
+                class="object-cover object-center w-full h-full"
+              />
+            </div>
+            <div class="flex flex-col flex-grow mt-4">
+              <h3 class="text-xl font-semibold mb-2">Food Drive</h3>
+              <p class="text-gray-700 flex-grow">
+                Help us collect and distribute food to those in need.
+              </p>
+            </div>
+          </div>
+
+          <!-- Event Card 3 -->
+          <div
+            class="event-card bg-white p-6 rounded-lg shadow-lg flex flex-col h-full transition-all duration-700"
+          >
+            <div class="w-full h-64 overflow-hidden rounded-t-lg flex-shrink-0">
+              <img
+                src="https://picsum.photos/1750"
+                alt="Event 3"
+                class="object-cover object-center w-full h-full"
+              />
+            </div>
+            <div class="flex flex-col flex-grow mt-4">
+              <h3 class="text-xl font-semibold mb-2">Education Fundraiser</h3>
+              <p class="text-gray-700 flex-grow">
+                Support education for underprivileged children.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Upcoming Event Section with Scroll Animation -->
+      <section class="container mx-auto px-4 py-12">
+        <h2 class="text-3xl font-bold text-center mb-8 text-yellow-600">
+          Upcoming Events
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Event Card 1 -->
+          <div
+            class="event-card bg-white p-6 rounded-lg shadow-lg flex flex-col h-full transition-all duration-700"
+          >
+            <div class="w-full h-64 overflow-hidden rounded-t-lg flex-shrink-0">
+              <img
+                src="https://picsum.photos/1500/2000"
+                alt="Event 1"
+                class="object-cover object-center w-full h-full"
+              />
+            </div>
+            <div class="flex flex-col flex-grow mt-4">
+              <h3 class="text-xl font-semibold mb-2">Charity Walk</h3>
+              <p class="text-gray-700 flex-grow">
+                Join us for our annual charity walk to support local children.
+              </p>
+            </div>
+          </div>
+
+          <!-- Event Card 2 -->
+          <div
+            class="event-card bg-white p-6 rounded-lg shadow-lg flex flex-col h-full transition-all duration-700"
+          >
+            <div class="w-full h-64 overflow-hidden rounded-t-lg flex-shrink-0">
+              <img
+                src="https://picsum.photos/1900/700"
+                alt="Event 2"
+                class="object-cover object-center w-full h-full"
+              />
+            </div>
+            <div class="flex flex-col flex-grow mt-4">
+              <h3 class="text-xl font-semibold mb-2">Food Drive</h3>
+              <p class="text-gray-700 flex-grow">
+                Help us collect and distribute food to those in need.
+              </p>
+            </div>
+          </div>
+
+          <!-- Event Card 3 -->
+          <div
+            class="event-card bg-white p-6 rounded-lg shadow-lg flex flex-col h-full transition-all duration-700"
+          >
+            <div class="w-full h-64 overflow-hidden rounded-t-lg flex-shrink-0">
+              <img
+                src="https://picsum.photos/1750"
+                alt="Event 3"
+                class="object-cover object-center w-full h-full"
+              />
+            </div>
+            <div class="flex flex-col flex-grow mt-4">
+              <h3 class="text-xl font-semibold mb-2">Education Fundraiser</h3>
+              <p class="text-gray-700 flex-grow">
+                Support education for underprivileged children.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Team quote slideshows  -->
+      <section class="container mx-auto px-4 py-8" data-aos="fade-up">
+        <h2 class="text-3xl font-bold text-center mb-6 text-yellow-600">
+          A Word from Our Founder
+        </h2>
+        <section class="splide" id="team-quote-slider">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <!-- Quote Slide 1 -->
+              <li class="splide__slide">
+                <div
+                  class="bg-white p-6 rounded-lg shadow-lg text-center flex flex-col items-center h-full"
+                >
+                  <div class="text-4xl mb-4">“</div>
+                  <p class="text-gray-700 mb-4 italic">
+                    "Our mission is to uplift communities and inspire change.
+                    Together, we can make a difference!"
+                  </p>
+                  <h4 class="text-lg font-semibold text-yellow-600 mb-2">
+                    - [Founder Name]
+                  </h4>
+                  <img
+                    src="https://picsum.photos/650"
+                    alt="Founder"
+                    class="rounded-full h-24 w-24 object-cover"
+                  />
+                </div>
+              </li>
+              <!-- Additional Quotes (Repeat Structure) -->
+              <li class="splide__slide">
+                <div
+                  class="bg-white p-6 rounded-lg shadow-lg text-center flex flex-col items-center h-full"
+                >
+                  <div class="text-4xl mb-4">“</div>
+                  <p class="text-gray-700 mb-4 italic">
+                    "Empowering people is our greatest achievement. Every action
+                    counts."
+                  </p>
+                  <h4 class="text-lg font-semibold text-yellow-600 mb-2">
+                    - [Other Leader]
+                  </h4>
+                  <img
+                    src="https://picsum.photos/650"
+                    alt="Leader"
+                    class="rounded-full h-24 w-24 object-cover"
+                  />
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </section>
+
+      <!-- Testimonials  -->
+      <section class="container mx-auto px-4 py-8" data-aos="fade-up">
+        <h2 class="text-3xl font-bold text-center mb-6 text-yellow-600">
+          Testimonials
+        </h2>
+        <section class="splide" id="testimonial-slider">
+          <div class="splide__track">
+            <ul class="splide__list space-x-3">
+              <!-- Testimonial 1 -->
+              <li class="splide__slide">
+                <div
+                  class="bg-white p-6 rounded-lg shadow-lg text-center flex flex-col h-full"
+                >
+                  <div class="flex-shrink-0">
+                    <img
+                      src="https://picsum.photos/600"
+                      alt="User 1"
+                      class="mx-auto rounded-full mb-4 h-24 w-24 object-cover"
+                    />
+                  </div>
+                  <div class="flex-grow">
+                    <p class="text-gray-700 mb-4">
+                      "This foundation has changed my life. I am so grateful for
+                      their support!"
+                    </p>
+                  </div>
+                  <h4 class="text-lg font-semibold text-yellow-600">
+                    - Jane Doe
+                  </h4>
+                </div>
+              </li>
+
+              <!-- Testimonial 2 -->
+              <li class="splide__slide">
+                <div
+                  class="bg-white p-6 rounded-lg shadow-lg text-center flex flex-col h-full"
+                >
+                  <div class="flex-shrink-0">
+                    <img
+                      src="https://picsum.photos/500"
+                      alt="User 2"
+                      class="mx-auto rounded-full mb-4 h-24 w-24 object-cover"
+                    />
+                  </div>
+                  <div class="flex-grow">
+                    <p class="text-gray-700 mb-4">
+                      "Amazing work! They truly care about making a difference."
+                    </p>
+                  </div>
+                  <h4 class="text-lg font-semibold text-yellow-600">
+                    - John Smith
+                  </h4>
+                </div>
+              </li>
+
+              <!-- Testimonial 3 -->
+              <li class="splide__slide">
+                <div
+                  class="bg-white p-6 rounded-lg shadow-lg text-center flex flex-col h-full"
+                >
+                  <div class="flex-shrink-0">
+                    <img
+                      src="https://picsum.photos/650"
+                      alt="User 3"
+                      class="mx-auto rounded-full mb-4 h-24 w-24 object-cover"
+                    />
+                  </div>
+                  <div class="flex-grow">
+                    <p class="text-gray-700 mb-4">
+                      "I have seen the positive impact firsthand. Highly
+                      recommended!"
+                    </p>
+                  </div>
+                  <h4 class="text-lg font-semibold text-yellow-600">
+                    - Alex Johnson
+                  </h4>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </section>
+
+      <!-- Donation Call-to-Action Section -->
+
+      <section
+        class="container mx-auto px-4 py-12 bg-yellow-100 text-center rounded-lg shadow-md"
+        data-aos="fade-up"
+      >
+        <h2 class="text-4xl font-bold mb-4 text-yellow-600">
+          Make a Difference Today
+        </h2>
+        <p class="text-gray-700 mb-6 text-lg max-w-xl mx-auto">
+          Your support helps us continue our mission to transform lives and
+          communities. Every donation, big or small, counts!
+        </p>
+        <a
+          href="/donate"
+          class="bg-yellow-600 text-white py-3 px-6 rounded-full text-lg font-semibold transition hover:bg-yellow-700"
+        >
+          Donate Now
+        </a>
+      </section>
+
+      <!-- Partners Logo carousel -->
+      <section class="container mx-auto px-4 py-8" data-aos="fade-up">
+        <h2 class="text-3xl font-bold text-center mb-6 text-yellow-600">
+          Our Partners
+        </h2>
+        <section class="splide" id="partner-slider">
+          <div class="splide__track">
+            <ul class="splide__list flex items-center space-x-3">
+              <!-- Partner Logo 1 -->
+              <li class="splide__slide flex justify-center">
+                <img
+                  src="https://picsum.photos/200/80"
+                  alt="Partner 1"
+                  class="object-contain h-20 w-40 mx-4"
+                />
+              </li>
+              <!-- Partner Logo 2 -->
+              <li class="splide__slide flex justify-center">
+                <img
+                  src="https://picsum.photos/200/80"
+                  alt="Partner 2"
+                  class="object-contain h-20 w-40 mx-4"
+                />
+              </li>
+              <!-- Partner Logo 3 -->
+              <li class="splide__slide flex justify-center">
+                <img
+                  src="https://picsum.photos/200/80"
+                  alt="Partner 3"
+                  class="object-contain h-20 w-40 mx-4"
+                />
+              </li>
+              <!-- Partner Logo 1 -->
+              <li class="splide__slide flex justify-center">
+                <img
+                  src="https://picsum.photos/200/80"
+                  alt="Partner 1"
+                  class="object-contain h-20 w-40 mx-4"
+                />
+              </li>
+              <!-- Partner Logo 2 -->
+              <li class="splide__slide flex justify-center">
+                <img
+                  src="https://picsum.photos/200/80"
+                  alt="Partner 2"
+                  class="object-contain h-20 w-40 mx-4"
+                />
+              </li>
+              <!-- Partner Logo 3 -->
+              <li class="splide__slide flex justify-center">
+                <img
+                  src="https://picsum.photos/200/80"
+                  alt="Partner 3"
+                  class="object-contain h-20 w-40 mx-4"
+                />
+              </li>
+              <li class="splide__slide flex justify-center">
+                <img
+                  src="https://picsum.photos/200/80"
+                  alt="Partner 1"
+                  class="object-contain h-20 w-40 mx-4"
+                />
+              </li>
+              <!-- Partner Logo 2 -->
+              <li class="splide__slide flex justify-center">
+                <img
+                  src="https://picsum.photos/200/80"
+                  alt="Partner 2"
+                  class="object-contain h-20 w-40 mx-4"
+                />
+              </li>
+              <!-- Partner Logo 3 -->
+              <li class="splide__slide flex justify-center">
+                <img
+                  src="https://picsum.photos/200/80"
+                  alt="Partner 3"
+                  class="object-contain h-20 w-40 mx-4"
+                />
+              </li>
+              <!-- Add more partner logos as needed -->
+            </ul>
+          </div>
+        </section>
+      </section>
+
+      <!-- FAQ Section -->
+      <section id="faq" class="bg-gray-100 py-12" data-aos="fade-in">
+        <div class="container mx-auto px-4">
+          <h2 class="text-2xl font-bold text-center mb-8">
+            Frequently Asked Questions
+          </h2>
+          <div class="space-y-4">
+            <!-- Accordion Item 1 -->
+            <div class="bg-white rounded-md shadow-md">
+              <button
+                type="button"
+                class="w-full text-left p-4 focus:outline-none accordion-header flex justify-between items-center"
+              >
+                <span class="font-semibold">How are donations used?</span>
+                <span class="accordion-icon">+</span>
+              </button>
+              <div class="accordion-content x p-4 text-gray-600">
+                Donations are primarily used to support community projects,
+                educational programs, and healthcare initiatives.
+              </div>
+            </div>
+            <!-- Accordion Item 2 -->
+            <div class="bg-white rounded-md shadow-md">
+              <button
+                type="button"
+                class="w-full text-left p-4 focus:outline-none accordion-header flex justify-between items-center"
+              >
+                <span class="font-semibold"
+                  >Is my donation tax-deductible?</span
+                >
+                <span class="accordion-icon">+</span>
+              </button>
+              <div class="accordion-content p-4 text-gray-600">
+                Yes, donations to registered non-profits like Sho Sho Foundation
+                are tax-deductible. Please consult your local tax authority.
+              </div>
+            </div>
+
+            <!-- Accordion Item 3 -->
+            <div class="bg-white rounded-md shadow-md">
+              <button
+                type="button"
+                class="w-full text-left p-4 focus:outline-none accordion-header flex justify-between items-center"
+              >
+                <span class="font-semibold"
+                  >Can I set up a recurring donation?</span
+                >
+                <span class="accordion-icon">+</span>
+              </button>
+              <div class="accordion-content p-4 text-gray-600 text-pretty">
+                We currently support one-time donations, but recurring donations
+                will be available soon.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="bg-gray-800 text-white py-12 mt-3">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-col gap-7 md:flex-row justify-between">
+            <!-- Website Info -->
+            <div class="mb-6 md:mb-0 w-full md:w-1/3">
+              <h3 class="text-xl font-bold mb-2">Sho Sho Foundation</h3>
+              <p class="text-gray-400">Impacting Lives, Meeting Needs.</p>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="mb-6 md:mb-0 w-full md:w-1/3">
+              <h4 class="text-lg font-semibold mb-2">Quick Links</h4>
+              <ul class="space-y-5">
+                <li>
+                  <a href="/index.html" class="hover:text-yellow-500 transition"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a href="/about.html" class="hover:text-yellow-500 transition"
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/gallery.html"
+                    class="hover:text-yellow-500 transition"
+                    >Gallery</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/donation.html"
+                    class="hover:text-yellow-500 transition"
+                    >Donations</a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    href="/contact.html"
+                    class="hover:text-yellow-500 transition"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Website Info -->
+            <div class="mb-6 md:mb-0 w-full md:w-1/3">
+              <!-- Social Media Links -->
+              <div class="">
+                <h4 class="text-lg font-semibold mb-2">Follow Us</h4>
+                <div class="flex space-x-4">
+                  <a href="#" class="hover:text-yellow-500 transition"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a href="#" class="hover:text-yellow-500 transition"
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a href="#" class="hover:text-yellow-500 transition"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                  <a href="#" class="hover:text-yellow-500 transition"
+                    ><i class="fab fa-linkedin-in"></i
+                  ></a>
+                </div>
+              </div>
+              <!-- Subscription Section -->
+              <div class="mt-6">
+                <h4 class="text-lg font-semibold mb-2">
+                  Subscribe for Updates
+                </h4>
+                <p class="text-gray-400 mb-2">
+                  Get notified about upcoming events and news!
+                </p>
+                <form
+                  id="subscribeForm"
+                  class="flex rounded-md"
+                  onsubmit="handleSubscriberSubmit(event)"
+                >
+                  <input
+                    type="email"
+                    id="emailInput"
+                    placeholder="Enter your email"
+                    class="p-2 rounded-l-md w-full text-gray-700"
+                    required
+                  />
+                  <button
+                    type="submit"
+                    onclick="handleSubscriberSubmit(event)"
+                    class="bg-yellow-500 hover:bg-yellow-600 text-white p-2 rounded-r-md"
+                  >
+                    Subscribe
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Divider Line -->
+          <div class="border-t border-gray-700 my-6"></div>
+
+          <!-- Credits and Copyright -->
+          <div
+            class="flex flex-col md:flex-row justify-between text-gray-400 text-sm space-y-3"
+          >
+            <p>&copy; 2024 Sho Sho Foundation. All rights reserved.</p>
+            <p>Designed by <span class="text-blue-500">Afripul Group</span></p>
+          </div>
+        </div>
+      </footer>
+
+      <!-- Back to Top Button -->
+      <button
+        id="backToTopBtn"
+        class="hidden w-6 h-6 aspect-square box-content fixed bottom-5 text-center right-5 p-3 bg-blue-600 text-white rounded-full shadow-md transition-opacity hover:bg-blue-700"
+      >
+        <i class="fas fa-arrow-up size-4"></i>
+      </button>
+    </section>
+
+    <!-- Scripts  -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- AOS Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Toastify.js -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/41222511d0.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts/scripts.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        new Splide("#testimonial-slider", {
+          type: "loop",
+          perPage: 2,
+          autoplay: true,
+          interval: 4000,
+          pauseOnHover: true,
+          pagination: true,
+          arrows: true,
+        }).mount();
+
+        new Splide("#team-quote-slider", {
+          type: "loop",
+          autoplay: true,
+          interval: 7000,
+          pauseOnHover: true,
+          arrows: false,
+          pagination: false,
+        }).mount();
+
+        new Splide("#partner-slider", {
+          type: "loop",
+          autoplay: true,
+          interval: 0, // No waiting between transitions
+          speed: 30000, // Slow speed for smooth motion (adjust as needed)
+          pauseOnHover: false, // Ensure it doesn't pause on hover for smoothness
+          pauseOnFocus: false, // Ensure it doesn't pause on hover for smoothness
+          arrows: false,
+          pagination: false,
+          direction: "rtl",
+          perPage: 4, // Number of slides visible at once
+          focus: 0, // Keeps the slide in focus centered
+          drag: false, // Disable dragging for a continuous effect
+          easing: "linear", // Makes the transition linear without acceleration
+          //  gap: 20,              // Optional: Adjust spacing between slides
+          autoScroll: {
+            speed: 1, // Very slow movement (alternative option)
+          },
+        }).mount();
+
+        new Splide("#hero-carousel", {
+          type: "fade",
+          autoplay: true,
+          interval: 5000,
+          pauseOnHover: true,
+          arrows: false,
+          pagination: false,
+        }).mount();
+      });
+      // Scroll Animation for Event Cards
+      const eventCards = document.querySelectorAll(".event-card");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.remove("opacity-0", "translate-y-8");
+              entry.target.classList.add("opacity-100", "translate-y-0");
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      eventCards.forEach((card) => observer.observe(card));
+    </script>
+  </body>
+</html>
