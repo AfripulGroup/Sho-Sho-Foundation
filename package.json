@@ -1,0 +1,15 @@
+{
+  "name": "sho-sho_foundation",
+  "scripts": {
+    "build": "tailwindcss -i ./styles/style.css -o ./dist/output.css --watch",
+    "format": "prettier --write \"./**/*.{js,html,css}\""
+  },
+  "packageManager": "yarn@4.3.1",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "prettier": "^3.4.1",
+    "prettier-plugin-tailwindcss": "^0.6.9",
+    "tailwindcss": "^3.4.15"
+  }
+}

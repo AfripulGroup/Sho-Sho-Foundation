@@ -10,11 +10,12 @@
   - [Technologies Used](#technologies-used)
   - [Setup Instructions](#setup-instructions)
     - [1. Clone the Repository](#1-clone-the-repository)
-    - [2. Run the Project](#2-run-the-project)
+    - [2. Install Dependencies](#2-install-dependencies)
+    - [3. Build and Watch Tailwind CSS](#3-build-and-watch-tailwind-css)
+    - [4. Start Editing](#4-start-editing)
   - [Contributing](#contributing)
   - [License](#license)
   - [Acknowledgments](#acknowledgments)
-
 
 # Sho Sho Foundation Website
 
@@ -62,7 +63,7 @@ The **Sho Sho Foundation** website is designed to empower communities and transf
 
 - **Backend**:
   - EmailJS for handling email notifications.
-  - Google Sheets for handling get and ost subscriber emails
+  - Google Sheets for handling get and post subscriber emails
 
 ## Setup Instructions
 
@@ -71,10 +72,25 @@ The **Sho Sho Foundation** website is designed to empower communities and transf
 git clone https://github.com/AfripulGroup/Sho-Sho-Foundation
 ```
 
-### 2. Run the Project
+### 2. Install Dependencies
+Once you have cloned the repository, navigate to the project folder and install the necessary dependencies.
+
+```bash
+yarn install
+```
+
+### 3. Build and Watch Tailwind CSS
+To compile Tailwind CSS and automatically rebuild the output when changes are made, run the following command:
+
+```bash
+yarn build
+```
+
+This will process your CSS files with Tailwind, Autoprefixer, and PostCSS, and the output will be stored in the `dist/output.css` file. Whenever you make changes to your CSS or HTML files, the classes will be updated in the `dist/output.css` automatically.
+
+### 4. Start Editing
 - Open the project in your text editor.
-- Make sure a live previewer is installed
-- Right click in any html file and launch with previewer
+- Tailwind CSS will now automatically rebuild the output file as you edit your styles.
 
 ## Contributing
 

@@ -57,7 +57,7 @@ function handleSubscriberSubmit(e) {
   // Disable form button and set submitting to true
   sfSubmitting = true;
   const submitButton = document.querySelector(
-    'form#subscribeForm button[type="submit"]'
+    'form#subscribeForm button[type="submit"]',
   );
   submitButton.disabled = true;
   // EmailJS: Send verification email
@@ -65,7 +65,7 @@ function handleSubscriberSubmit(e) {
     .send("service_v0vr51u", "template_8z3km8p", {
       to_email: email,
       verification_link: `https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec?token=${encodeURIComponent(
-        token
+        token,
       )}`,
     })
     .then(() => {

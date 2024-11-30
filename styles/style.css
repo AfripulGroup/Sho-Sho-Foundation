@@ -1,6 +1,6 @@
-body {
-  font-family: "Arial", sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 .hero {
   background-size: cover;
@@ -10,6 +10,7 @@ body {
 .testimonial-card {
   transition: transform 0.3s ease;
 }
+
 .testimonial-card:hover {
   transform: translateY(-5px);
 }
@@ -18,13 +19,15 @@ body {
 #mobile-menu {
   max-height: 0;
   overflow: hidden;
-  transition: all 0.4s ease-out; /* Adjust timing as needed */
+  transition: all 0.4s ease-out;
+  /* Adjust timing as needed */
 }
 
 /* Class to show the menu */
 #mobile-menu.show {
   margin-top: 20px;
-  max-height: 300px; /* Set to a value large enough for your content */
+  max-height: 300px;
+  /* Set to a value large enough for your content */
 }
 
 footer input#emailInput:focus-visible {
@@ -39,7 +42,8 @@ footer form#subscribeForm:focus-within {
 section#faq .accordion-content {
   max-height: none;
   /* overflow: hidden; */
-  transition: all 0.4s ease-out; /* Adjust timing as needed */
+  transition: all 0.4s ease-out;
+  /* Adjust timing as needed */
   display: none;
 }
 
@@ -50,8 +54,10 @@ section#faq .accordion-content.show {
 
 /* Back to Top Button Style */
 #backToTopBtn {
-  display: none; /* Initially hidden */
-  opacity: 0; /* For smooth fade-in/out */
+  display: none;
+  /* Initially hidden */
+  opacity: 0;
+  /* For smooth fade-in/out */
   transition: opacity 0.3s ease;
 }
 
@@ -61,5 +67,6 @@ section#faq .accordion-content.show {
 }
 
 #backToTopBtn:hover {
-  background-color: #2563eb; /* Darker blue on hover */
+  background-color: #2563eb;
+  /* Darker blue on hover */
 }

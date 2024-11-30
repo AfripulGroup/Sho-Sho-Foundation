@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -83,17 +83,14 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
     />
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
+    <link href="dist/output.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles/style.css" />
   </head>
 
   <body>
     <section class="bg-gray-100 container-fluid px-auto transition-all">
       <!-- Navigation Bar -->
-      <nav class="bg-blue-600 py-4 px-4 md:pl-0 md:pr-4">
+      <nav class="bg-blue-600 py-4 px-4 max-md:pl-0 max-md:pr-4">
         <div class="container mx-auto flex justify-between items-center">
           <!-- Logo -->
           <a href="#" class="text-white text-2xl font-bold"
@@ -101,7 +98,7 @@
           >
 
           <!-- Desktop Menu -->
-          <ul id="menu" class="md:flex hidden space-x-6 text-white">
+          <ul id="menu" class="flex max-md:hidden space-x-6 text-white">
             <li>
               <a href="/index.html" class="hover:text-gray-200 transition"
                 >Home</a
@@ -890,7 +887,7 @@
             }
           });
         },
-        { threshold: 0.2 }
+        { threshold: 0.2 },
       );
 
       eventCards.forEach((card) => observer.observe(card));
