@@ -1,0 +1,723 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      property="og:title"
+      content="À propos de la Fondation Sho Sho - Notre mission et vision"
+    />
+    <meta
+      property="og:description"
+      content="En savoir plus sur la mission de la Fondation Sho Sho pour autonomiser les communautés par l'éducation et le soutien."
+    />
+    <meta property="og:url" content="https://example.com/about.html" />
+    <meta
+      property="og:image"
+      content="https://example.com/images/about-og.jpg"
+    />
+
+    <meta
+      name="twitter:title"
+      content="À propos de la Fondation Sho Sho - Notre mission et vision"
+    />
+    <meta
+      name="twitter:description"
+      content="En savoir plus sur la mission de la Fondation Sho Sho pour autonomiser les communautés par l'éducation et le soutien."
+    />
+    <meta
+      name="twitter:image"
+      content="https://example.com/images/about-twitter.jpg"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://example.com/about.html"
+        },
+        "name": "À propos de la Fondation Sho Sho",
+        "description": "Découvrez la mission, la vision et l'impact que la Fondation Sho Sho cherche à créer dans les communautés.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Fondation Sho Sho",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://example.com/images/logo.png"
+          }
+        }
+      }
+    </script>
+
+    <title>À propos de nous - Fondation Sho Sho</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+
+    <!-- CSS de Splide.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/41222511d0.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Ajouter Toastify.js CDN pour les notifications Toast -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link href="../dist/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+  </head>
+
+  <body>
+    <main class="bg-gray-100 container-fluid px-auto transition-all">
+      <!-- Navigation Bar -->
+      <nav class="bg-blue-600 py-4 px-4 max-md:px-2">
+        <div class="container mx-auto flex justify-between items-center">
+          <!-- Logo -->
+          <a
+            href="/fr/index.html"
+            class="w-36 h-11 md:w-44 md:h-12 xl:w-48 xl:h-14"
+          >
+            <img
+              src="/images/Sho-Sho.png"
+              alt="Sho Sho Foundation Logo"
+              class="object-cover object-center h-full w-full"
+            />
+          </a>
+
+          <!-- Desktop Menu -->
+          <ul id="menu" class="flex max-md:hidden space-x-6 text-white">
+            <li>
+              <a
+                href="/fr/index.html"
+                class="hover:text-logo-tertiary transition font-medium active"
+                >Accueil</a
+              >
+            </li>
+            <li>
+              <a
+                href="/fr/about.html"
+                class="hover:text-logo-tertiary transition font-medium"
+                >À propos</a
+              >
+            </li>
+            <li>
+              <a
+                href="/fr/gallery.html"
+                class="hover:text-logo-tertiary transition font-medium"
+                >Galerie</a
+              >
+            </li>
+            <li>
+              <a
+                href="/fr/donation.html"
+                class="hover:text-logo-tertiary transition font-medium"
+                >Dons</a
+              >
+            </li>
+            <li>
+              <a
+                href="/fr/contact.html"
+                class="hover:text-logo-tertiary transition font-medium"
+                >Contact</a
+              >
+            </li>
+            <li>
+              <a
+                href="/index.html"
+                class="hover:text-logo-tertiary transition font-medium mr-5"
+                >English</a
+              >
+            </li>
+          </ul>
+
+          <!-- Mobile Menu Toggle Button -->
+          <button
+            type="button"
+            id="menu-toggle"
+            class="md:hidden text-white focus:outline-none"
+          >
+            <!-- Hamburger Icon -->
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Menu (Initially Hidden) -->
+        <ul
+          id="mobile-menu"
+          class="md:hidden flex-col items-center text-white space-y-4"
+        >
+          <div class="border-t border-white/25 -700 my-1"></div>
+
+          <li>
+            <a
+              href="/fr/index.html"
+              class="hover:text-logo-tertiary transition font-medium active"
+              >Accueil</a
+            >
+          </li>
+          <li>
+            <a
+              href="/fr/about.html"
+              class="hover:text-logo-tertiary transition font-medium"
+              >À propos</a
+            >
+          </li>
+          <li>
+            <a
+              href="/fr/gallery.html"
+              class="hover:text-logo-tertiary transition font-medium"
+              >Galerie</a
+            >
+          </li>
+          <li>
+            <a
+              href="/fr/donation.html"
+              class="hover:text-logo-tertiary transition font-medium"
+              >Dons</a
+            >
+          </li>
+          <li>
+            <a
+              href="/fr/contact.html"
+              class="hover:text-logo-tertiary transition font-medium"
+              >Contact</a
+            >
+          </li>
+          <li class="pt-7 border-t-2 border-white/25">
+            <a
+              href="/index.html"
+              class="hover:text-logo-tertiary transition font-medium mt-2"
+              >English</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <!-- About Section -->
+      <section class="py-16 mb-5" data-aos="fade-up">
+        <div class="container mx-auto text-center">
+          <h2 class="text-4xl font-bold text-logo-main mb-6">
+            À propos de nous
+          </h2>
+          <p class="text-lg text-gray-700 max-w-4xl mx-auto mb-8">
+            La Fondation Sho Sho est une organisation caritative (ONG) qui
+            s'efforce d'aider les gens autant que possible avec nos
+            installations. Nous visons à améliorer le bien-être social et la
+            philanthropie et nous nous engageons également à aider les enfants
+            et leurs familles dans le besoin. Nous sommes transparents et
+            ouverts dans nos relations, nous efforçant de respecter les normes
+            éthiques les plus élevées, en traitant toutes les personnes avec
+            dignité et respect. Nous veillons également à ce que chacun ait la
+            possibilité de vivre pleinement son potentiel en inculquant la
+            discipline, les enseignements bibliques et les valeurs morales.
+          </p>
+          <img
+            src="/images/about-hero-image.jpg"
+            alt="Image À propos"
+            class="mx-auto rounded-lg shadow-lg h-96 object-cover object-bottom w-full max-w-xl"
+          />
+        </div>
+      </section>
+
+      <!-- Our History Section -->
+      <section class="py-12 text-center bg-white my-14" data-aos="fade-up">
+        <h2 class="text-3xl font-bold mb-4 text-logo-main">Notre Histoire</h2>
+        <p class="text-gray-700 max-w-3xl mx-auto">
+          Fondée avec pour mission de servir, la Fondation Sho Sho est passée
+          d'une petite initiative à un phare d'espoir pour beaucoup.
+        </p>
+      </section>
+
+      <!-- How It All Started Section -->
+      <section class="py-12 bg-gray-100 text-center my-14" data-aos="fade-up">
+        <h2 class="text-3xl font-bold mb-4 text-logo-main">
+          Comment tout a commencé
+        </h2>
+        <p class="text-gray-700 max-w-3xl mx-auto">
+          La vision est née de l'amour, des soins et d'une profonde passion pour
+          les enfants orphelins, inspirée par la reconnaissance des nombreuses
+          choses dont ils sont souvent privés en raison de leurs circonstances.
+          Dès le début, j'ai été animé par une forte détermination à apporter à
+          ces enfants tout ce qu'un enfant mérite pour s'épanouir et qu'ils
+          pourraient autrement ne pas avoir accès, que ce soit un soutien
+          éducatif, des besoins de base et un soutien moral. Pour constamment
+          renforcer leur confiance, leur foi et renouveler leur espoir pour
+          l'avenir, quelles que soient leurs situations passées et présentes.
+        </p>
+      </section>
+
+      <!-- Mission and Values Section -->
+      <section class="py-12 bg-white overflow-clip my-14">
+        <div
+          class="container mx-auto px-6 flex flex-col md:flex-row justify-between gap-5"
+        >
+          <!-- Mission -->
+          <div
+            class="w-full md:w-1/2 mb-8 md:mb-0 flex flex-col items-start gap-3 leading-5"
+            data-aos="fade-up"
+          >
+            <h3 class="text-3xl font-bold mb-4 text-logo-main">
+              Notre Mission
+            </h3>
+            <p class="text-gray-700 text-balance">
+              La Fondation SHO SHO Helping Hands est dédiée à nourrir le
+              bien-être spirituel, émotionnel et physique des enfants dans les
+              orphelinats. Nous pourvoyons à leurs besoins de base et offrons un
+              soutien financier pour garantir que chaque enfant ait accès à
+              l'éducation.
+            </p>
+            <p class="text-gray-700 text-balance">
+              De plus, nous offrons des formations aux compétences de vie et des
+              opportunités de développement personnel. Tout en soutenant leurs
+              besoins pratiques, nous les guidons également dans le
+              développement d'une relation personnelle avec Dieu, les aidant à
+              éprouver la joie et le réconfort de la foi.
+            </p>
+          </div>
+          <!-- Vision -->
+          <div
+            class="w-full md:w-1/2 mb-8 md:mb-0 flex flex-col items-end text-right gap-3 leading-5"
+            data-aos="fade-up"
+          >
+            <h3 class="text-3xl font-bold mb-4 text-logo-main">Notre Vision</h3>
+            <p class="text-gray-700 text-balance">
+              Autonomiser les enfants orphelins avec l'éducation, les
+              compétences de vie et la foi, les aidant à devenir des individus
+              confiants et capables qui ont un impact positif sur leurs
+              communautés.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Core Values Section -->
+      <section class="py-12 bg-gray-100 my-14" data-aos="fade-up">
+        <h2 class="text-3xl font-bold mb-8 text-logo-main text-center">
+          Nos Valeurs Fondamentales
+        </h2>
+
+        <!-- Core Values Container -->
+        <div
+          class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-gray-700 px-6"
+        >
+          <!-- Divine Presence -->
+          <div class="flex items-start gap-3">
+            <div class="flex justify-center items-center w-14">
+              <i
+                class="fas fa-hands-praying text-yellow-500 text-4xl w-full h-full object-contain"
+              ></i>
+            </div>
+            <div class="flex flex-col flex-1">
+              <h3 class="text-xl font-semibold mb-2">Présence Divine</h3>
+              <p>
+                Apporter la présence divine aux orphelins et enseigner aux gens
+                à avoir des relations avec Dieu.
+              </p>
+            </div>
+          </div>
+
+          <!-- Excellence -->
+          <div class="flex items-start gap-3">
+            <div class="flex justify-center items-center w-14">
+              <i
+                class="fas fa-star text-yellow-500 text-4xl w-full h-full object-contain"
+              ></i>
+            </div>
+            <div class="flex flex-col flex-1">
+              <h3 class="text-xl font-semibold mb-2">Excellence</h3>
+              <p>Donner le meilleur de nous-mêmes à ceux qui en ont besoin.</p>
+            </div>
+          </div>
+
+          <!-- Sacrifice -->
+          <div class="flex items-start gap-3">
+            <div class="flex justify-center items-center w-14">
+              <i
+                class="fas fa-heart text-yellow-500 text-4xl w-full h-full object-contain"
+              ></i>
+            </div>
+            <div class="flex flex-col flex-1">
+              <h3 class="text-xl font-semibold mb-2">Sacrifice</h3>
+              <p>Servir avec le cœur de Dieu, quel qu'en soit le coût.</p>
+            </div>
+          </div>
+
+          <!-- Compassion -->
+          <div class="flex items-start gap-3">
+            <div class="flex justify-center items-center w-14">
+              <i
+                class="fas fa-hand-holding-heart text-yellow-500 text-4xl w-full h-full object-contain"
+              ></i>
+            </div>
+            <div class="flex flex-col flex-1">
+              <h3 class="text-xl font-semibold mb-2">Compassion</h3>
+              <p>Accompagner les enfants sur leur chemin de rédemption.</p>
+            </div>
+          </div>
+
+          <!-- Perseverance -->
+          <div class="flex items-start gap-3">
+            <div class="flex justify-center items-center w-14">
+              <i
+                class="fas fa-child text-yellow-500 text-5xl w-full h-full object-contain"
+              ></i>
+            </div>
+            <div class="flex flex-col flex-1">
+              <h3 class="text-xl font-semibold mb-2">Persévérance</h3>
+              <p>Ne jamais abandonner un enfant.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Meet the Team Section -->
+      <section class="py-12 bg-gray-100 my-14" data-aos="fade-up">
+        <h2 class="text-3xl font-bold text-center mb-8 text-logo-main">
+          Rencontrez l'équipe
+        </h2>
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 gap-8 container mx-auto px-6"
+        >
+          <!-- Team Member 1 -->
+          <div
+            class="bg-white invisible max-md:hidden p-6 rounded-lg shadow-lg text-center"
+          >
+            <img
+              src="/images/founder profile.jpg"
+              alt="Membre de l'équipe"
+              class="mx-auto rounded-full mb-4 w-32 h-32 object-cover object-top md:col-start-2 col-span-1"
+            />
+            <h4 class="text-xl font-semibold text-logo-main">
+              Olabisi Shodunke
+            </h4>
+            <p class="text-gray-700">Fondatrice & PDG</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+            <img
+              src="/images/founder profile.jpg"
+              alt="Membre de l'équipe"
+              class="mx-auto rounded-full mb-4 w-32 h-32 object-cover object-top md:col-start-2 col-span-1"
+            />
+            <h4 class="text-xl font-semibold text-logo-main">
+              Olabisi Shodunke
+            </h4>
+            <p class="text-gray-700">Fondatrice & PDG</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Milestones Section -->
+      <section class="py-12 bg-white my-14" data-aos="fade-up">
+        <h2 class="text-3xl font-bold text-center mb-8 text-logo-main">
+          Notre Impact
+        </h2>
+        <div class="flex justify-around container mx-auto px-6">
+          <div class="text-center">
+            <i class="fas fa-map-marker-alt text-6xl text-logo-main"></i>
+            <h3 class="text-2xl font-semibold mt-4" id="states-count">0</h3>
+            <p class="text-gray-700">États Atteints</p>
+          </div>
+          <div class="text-center">
+            <i class="fas fa-users text-6xl text-logo-main"></i>
+            <h3 class="text-2xl font-semibold mt-4" id="children-count">0</h3>
+            <p class="text-gray-700">Enfants Impactés</p>
+          </div>
+          <div class="text-center">
+            <i class="fas fa-heart text-6xl text-logo-main"></i>
+            <h3 class="text-2xl font-semibold mt-4" id="lives-count">0</h3>
+            <p class="text-gray-700">Vies Changées</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Credits Section -->
+      <section class="py-12 bg-gray-100 text-center my-14" data-aos="fade-up">
+        <h2 class="text-3xl font-bold mb-4 text-logo-main">
+          Remerciements Spéciaux
+        </h2>
+        <p class="text-gray-700 max-w-3xl mx-auto mb-8">
+          Nous sommes profondément reconnaissants envers nos bénévoles, sponsors
+          et donateurs pour leur soutien indéfectible et leur dévouement.
+        </p>
+        <div class="flex flex-wrap justify-center">
+          <!-- Volunteer Section -->
+          <div class="w-full md:w-1/3 p-4">
+            <h3 class="text-xl font-semibold mb-2 text-logo-main">Bénévoles</h3>
+            <ul class="list-none">
+              <li class="text-gray-700">Emily White</li>
+              <li class="text-gray-700">Mark Lee</li>
+              <li class="text-gray-700">Sophia Brown</li>
+            </ul>
+          </div>
+
+          <!-- Sponsor Section -->
+          <div class="w-full md:w-1/3 p-4">
+            <h3 class="text-xl font-semibold mb-2 text-logo-main">Sponsors</h3>
+            <ul class="list-none">
+              <li class="text-gray-700">ABC Corp</li>
+              <li class="text-gray-700">XYZ Ltd</li>
+            </ul>
+          </div>
+
+          <!-- Donor Section -->
+          <div class="w-full md:w-1/3 p-4">
+            <h3 class="text-xl font-semibold mb-2 text-logo-main">Donateurs</h3>
+            <ul class="list-none">
+              <li class="text-gray-700">Michael Green</li>
+              <li class="text-gray-700">Olivia Martin</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="bg-gray-800 text-white py-12 mt-3">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-col gap-7 md:flex-row justify-between">
+            <!-- Organization Info -->
+            <div class="mb-6 md:mb-0 w-full md:w-1/3">
+              <h3 class="text-xl font-bold mb-2">Sho Sho Fondation</h3>
+              <p class="text-gray-400">
+                Impacter des vies, répondre aux besoins.
+              </p>
+              <p class="text-gray-400 mt-4">
+                <strong>Adresse :</strong> 123 Charity Lane, Ville, Pays
+              </p>
+              <p class="text-gray-400 mt-2">
+                <strong>Téléphone :</strong> +123 456 7890
+              </p>
+              <p class="text-gray-400 mt-2">
+                <strong>Email :</strong> Shoshofoundation2024@gmail.com
+              </p>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="mb-6 md:mb-0 w-full md:w-1/3">
+              <h4 class="text-lg font-semibold mb-2">Liens Rapides</h4>
+              <ul class="space-y-5">
+                <li>
+                  <a
+                    href="/fr/index.html"
+                    class="hover:text-yellow-500 transition"
+                    >Accueil</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/fr/about.html"
+                    class="hover:text-yellow-500 transition"
+                    >À propos</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/fr/gallery.html"
+                    class="hover:text-yellow-500 transition"
+                    >Galerie</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/fr/donation.html"
+                    class="hover:text-yellow-500 transition"
+                    >Dons</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/fr/contact.html"
+                    class="hover:text-yellow-500 transition"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Website Info -->
+            <div class="mb-6 md:mb-0 w-full md:w-1/3">
+              <!-- Social Media Links -->
+              <div class="">
+                <h4 class="text-lg font-semibold mb-2">Suivez-nous</h4>
+                <div class="flex space-x-4">
+                  <a
+                    href="https://www.facebook.com/share/g/1Be3CuSHXf/?mibextid=K35XfP"
+                    class="hover:text-yellow-500 transition"
+                  >
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="#" class="hover:text-yellow-500 transition">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="#" class="hover:text-yellow-500 transition">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a
+                    href="https://chat.whatsapp.com/FGc4ScwdkGABjdPkWOONER"
+                    class="hover:text-yellow-500 transition"
+                  >
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </div>
+              </div>
+              <!-- Subscription Section -->
+              <div class="mt-6">
+                <h4 class="text-lg font-semibold mb-2">
+                  Abonnez-vous pour les mises à jour
+                </h4>
+                <p class="text-gray-400 mb-2">
+                  Recevez des notifications sur les événements à venir et les
+                  nouvelles !
+                </p>
+                <form
+                  id="subscribeForm"
+                  class="flex rounded-md"
+                  onsubmit="handleSubscriberSubmit(event)"
+                >
+                  <input
+                    type="email"
+                    id="emailInput"
+                    placeholder="Entrez votre email"
+                    class="p-2 rounded-l-md w-full text-gray-700"
+                    required
+                  />
+                  <button
+                    type="submit"
+                    onclick="handleSubscriberSubmit(event)"
+                    class="bg-logo-main hover:bg-logo-main/90 text-white p-2 rounded-r-md"
+                  >
+                    S'abonner
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Divider Line -->
+          <div class="border-t border-gray-700 my-6"></div>
+
+          <!-- Credits and Copyright -->
+          <div
+            class="flex flex-col md:flex-row justify-between text-gray-400 text-sm space-y-3"
+          >
+            <p>&copy; 2024 Sho Sho Fondation. Tous droits réservés.</p>
+            <p>
+              Conçu par
+              <a
+                href="https://afripulgroup.com"
+                class="text-blue-500 no-underline hover:underline-"
+                >Afripul Group</a
+              >
+            </p>
+          </div>
+        </div>
+      </footer>
+
+      <!-- Back to Top Button -->
+      <button
+        id="backToTopBtn"
+        class="hidden w-6 h-6 aspect-square box-content fixed bottom-5 text-center right-5 p-3 bg-blue-600 text-white rounded-full shadow-md transition-opacity hover:bg-blue-700"
+      >
+        <i class="fas fa-arrow-up size-4"></i>
+      </button>
+    </main>
+
+    <!-- Scripts  -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- AOS Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Toastify.js -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/41222511d0.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../scripts/scripts.js"></script>
+    <script>
+      // Function to animate the count-up with dynamic step calculation using Date.now()
+      function animateCountUp(elementId, targetValue, duration) {
+        const element = document.getElementById(elementId);
+        let currentValue = 0;
+        const startTime = Date.now(); // Start time for the count-up
+
+        // Interval function to update the counter value
+        const interval = setInterval(function () {
+          const elapsedTime = Date.now() - startTime; // Calculate elapsed time
+
+          // Calculate the current value based on elapsed time and the target duration
+          currentValue = Math.floor((elapsedTime / duration) * targetValue);
+
+          // Update the counter element with the current value
+          element.innerHTML = currentValue;
+
+          // Stop the animation when the target value is reached
+          if (currentValue >= targetValue) {
+            clearInterval(interval);
+            element.innerHTML = targetValue; // Ensure the final value is set correctly
+          }
+        }, 10); // Update the value every 10ms for smooth animation
+      }
+
+      // Create an Intersection Observer to detect when the elements are in view
+      const observer = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              // If the element is in view, start the count-up animation
+              const elementId = entry.target.id;
+              if (elementId === "states-count") {
+                animateCountUp("states-count", 300, 3000); // 300 states reached in 3 seconds
+              } else if (elementId === "children-count") {
+                animateCountUp("children-count", 3000, 3000); // 3000 children impacted in 3 seconds
+              } else if (elementId === "lives-count") {
+                animateCountUp("lives-count", 500, 3000); // 500 lives changed in 3 seconds
+              }
+
+              // Stop observing the element once the animation starts
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.5, // Trigger when 50% of the element is visible in the viewport
+        },
+      );
+
+      // Start observing the count-up elements
+      window.onload = function () {
+        observer.observe(document.getElementById("states-count"));
+        observer.observe(document.getElementById("children-count"));
+        observer.observe(document.getElementById("lives-count"));
+      };
+    </script>
+  </body>
+</html>

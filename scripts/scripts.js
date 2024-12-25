@@ -61,10 +61,11 @@ function handleSubscriberSubmit(e) {
   );
   submitButton.disabled = true;
   // EmailJS: Send verification email
+
   emailjs
-    .send("service_v0vr51u", "template_8z3km8p", {
+    .send("service_jkxrajp", "template_8z3km8p", {
       to_email: email,
-      verification_link: `https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec?token=${encodeURIComponent(
+      verification_link: `https://script.google.com/macros/s/AKfycbzrnlrflIYdNG7HClITtEIItGL3AqbIhMB26jHKjeZe4ctlOrB255inUhOYgCYMUDIhxA/exec?token=${encodeURIComponent(
         token,
       )}`,
     })
@@ -74,7 +75,7 @@ function handleSubscriberSubmit(e) {
         backgroundColor: "green",
         duration: 3000,
       }).showToast();
-      this.reset(); // Reset form fields
+      document.getElementById("subscribeForm").reset();
     })
     .catch((error) => {
       Toastify({

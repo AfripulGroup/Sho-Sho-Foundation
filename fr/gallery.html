@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      property="og:title"
+      content="Galerie - Souvenirs et événements de la Fondation Sho Sho"
+    />
+    <meta
+      property="og:description"
+      content="Explorez les événements passés, les souvenirs et les moments marquants capturés par la Fondation Sho Sho."
+    />
+    <meta property="og:url" content="https://example.com/fr/gallery.html" />
+    <meta
+      property="og:image"
+      content="https://example.com/images/gallery-og.jpg"
+    />
+
+    <meta
+      name="twitter:title"
+      content="Galerie - Souvenirs et événements de la Fondation Sho Sho"
+    />
+    <meta
+      name="twitter:description"
+      content="Explorez les événements passés, les souvenirs et les moments marquants capturés par la Fondation Sho Sho."
+    />
+    <meta
+      name="twitter:image"
+      content="https://example.com/images/gallery-twitter.jpg"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Galerie de la Fondation Sho Sho",
+        "description": "Une collection d'images et de souvenirs mettant en valeur les événements passés et les efforts de soutien à la communauté de la Fondation Sho Sho.",
+        "mainEntity": {
+          "@type": "ImageGallery",
+          "url": "https://example.com/gallery.html"
+        }
+      }
+    </script>
+
+    <title>Galerie - Fondation Sho Sho</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+
+    <!-- CSS de Splide.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/41222511d0.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Ajouter Toastify.js CDN pour les notifications Toast -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link href="../dist/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+  </head>
+
+  <body>
+    <main class="bg-gray-100 container-fluid px-auto transition-all">
+      <!-- Navigation Bar -->
+      <nav class="bg-blue-600 py-4 px-4 max-md:px-2">
+        <div class="container mx-auto flex justify-between items-center">
+          <!-- Logo -->
+          <a
+            href="/fr/index.html"
+            class="w-36 h-11 md:w-44 md:h-12 xl:w-48 xl:h-14"
+          >
+            <img
+              src="/images/Sho-Sho.png"
+              alt="Sho Sho Foundation Logo"
+              class="object-cover object-center h-full w-full"
+            />
+          </a>
+
+          <!-- Desktop Menu -->
+          <ul id="menu" class="flex max-md:hidden space-x-6 text-white">
+            <li>
+              <a
+                href="/fr/index.html"
+                class="hover:text-logo-tertiary transition font-medium active"
+                >Accueil</a
+              >
+            </li>
+            <li>
+              <a
+                href="/fr/about.html"
+                class="hover:text-logo-tertiary transition font-medium"
+                >À propos</a
+              >
+            </li>
+            <li>
+              <a
+                href="/fr/gallery.html"
+                class="hover:text-logo-tertiary transition font-medium"
+                >Galerie</a
+              >
+            </li>
+            <li>
+              <a
+                href="/fr/donation.html"
+                class="hover:text-logo-tertiary transition font-medium"
+                >Dons</a
+              >
+            </li>
+            <li>
+              <a
+                href="/fr/contact.html"
+                class="hover:text-logo-tertiary transition font-medium"
+                >Contact</a
+              >
+            </li>
+            <li>
+              <a
+                href="/index.html"
+                class="hover:text-logo-tertiary transition font-medium mr-5"
+                >English</a
+              >
+            </li>
+          </ul>
+
+          <!-- Mobile Menu Toggle Button -->
+          <button
+            type="button"
+            id="menu-toggle"
+            class="md:hidden text-white focus:outline-none"
+          >
+            <!-- Hamburger Icon -->
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Menu (Initially Hidden) -->
+        <ul
+          id="mobile-menu"
+          class="md:hidden flex-col items-center text-white space-y-4"
+        >
+          <div class="border-t border-white/25 -700 my-1"></div>
+
+          <li>
+            <a
+              href="/fr/index.html"
+              class="hover:text-logo-tertiary transition font-medium active"
+              >Accueil</a
+            >
+          </li>
+          <li>
+            <a
+              href="/fr/about.html"
+              class="hover:text-logo-tertiary transition font-medium"
+              >À propos</a
+            >
+          </li>
+          <li>
+            <a
+              href="/fr/gallery.html"
+              class="hover:text-logo-tertiary transition font-medium"
+              >Galerie</a
+            >
+          </li>
+          <li>
+            <a
+              href="/fr/donation.html"
+              class="hover:text-logo-tertiary transition font-medium"
+              >Dons</a
+            >
+          </li>
+          <li>
+            <a
+              href="/fr/contact.html"
+              class="hover:text-logo-tertiary transition font-medium"
+              >Contact</a
+            >
+          </li>
+          <li class="pt-7 border-t-2 border-white/25">
+            <a
+              href="/index.html"
+              class="hover:text-logo-tertiary transition font-medium mt-2"
+              >English</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Hero Carousel -->
+      <section class="splide relative" id="hero-carousel">
+        <!-- Display Text -->
+        <h2 class="text-4xl mt-9 font-bold text-center text-logo-main mb-6">
+          Gallery
+        </h2>
+
+        <!-- Hero carousel images -->
+        <div class="splide__track relative">
+          <!-- Overlay  -->
+          <div
+            class="container-fluid text-center text-white absolute inset-0 flex z-10 items-center justify-center bg-black bg-opacity-50"
+          ></div>
+          <ul class="splide__list">
+            <!-- Slide 1 -->
+            <li class="splide__slide relative">
+              <img
+                src="/images/gallery_image (10).webp"
+                alt="Hero 1"
+                class="w-full h-96 object-cover"
+              />
+            </li>
+            <!-- Slide 2 -->
+            <li class="splide__slide">
+              <img
+                src="/images/gallery_image (12).webp"
+                alt="Hero 2"
+                class="w-full h-96 object-cover"
+              />
+            </li>
+            <!-- Slide 3 -->
+            <li class="splide__slide">
+              <img
+                src="/images/gallery_image (2).webp"
+                alt="Hero 3"
+                class="w-full h-96 object-cover"
+              />
+            </li>
+            <!-- Slide 4 -->
+            <li class="splide__slide">
+              <img
+                src="/images/gallery_image (3).webp"
+                alt="Hero 4"
+                class="w-full h-96 object-cover"
+              />
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- May -->
+
+      <!-- June -->
+      <section
+        id="JuneMonth2024"
+        class="container mx-auto text-center space-y-5 my-12"
+        data-aos="slide-in"
+      >
+        <h3 class="text-2xl font-semibold text-gray-800">June 2024</h3>
+        <div class="grid grid-cols-3 gap-4 mt-4">
+          <img
+            src="/images/gallery_image (35).webp"
+            alt="June Image 1"
+            class="rounded-md shadow-md"
+            data-aos="fade-in"
+          />
+          <img
+            src="/images/gallery_image (4).webp"
+            alt="June Image 2"
+            class="rounded-md shadow-md col-span-2"
+            data-aos="fade-in"
+          />
+          <img
+            src="/images/gallery_image (25).webp"
+            alt="June Image 3"
+            class="rounded-md shadow-md row-span-2"
+            data-aos="fade-in"
+          />
+          <img
+            src="/images/gallery_image (39).webp"
+            alt="June Image 4"
+            class="rounded-md shadow-md"
+            data-aos="fade-in"
+          />
+          <img
+            src="/images/gallery_image (42).webp"
+            alt="June Image 5"
+            class="rounded-md shadow-md"
+            data-aos="fade-in"
+          />
+          <img
+            src="/images/gallery_image (1).webp"
+            alt="June Image 6"
+            class="rounded-md shadow-md"
+            data-aos="fade-in"
+          />
+          <img
+            src="/images/gallery_image (36).webp"
+            alt="June Image 7"
+            class="rounded-md shadow-md"
+            data-aos="fade-in"
+          />
+          <img
+            src="/images/gallery_image (47).webp"
+            alt="June Image 8"
+            class="rounded-md shadow-md col-span-2"
+            data-aos="fade-in"
+          />
+          <img
+            src="/images/gallery_image (50).webp"
+            alt="June Image 9"
+            class="rounded-md shadow-md"
+            data-aos="fade-in"
+          />
+          <img
+            src="/images/gallery_image (11).webp"
+            alt="June Image 10"
+            class="rounded-md shadow-md"
+            data-aos="fade-in"
+          />
+          <img
+            src="/images/gallery_image (58).webp"
+            alt="June Image 11"
+            class="rounded-md shadow-md"
+            data-aos="fade-in"
+          />
+          <img
+            src="/images/gallery_image (40).webp"
+            alt="June Image 12"
+            class="rounded-md shadow-md row-span-2"
+            data-aos="fade-in"
+          />
+        </div>
+      </section>
+
+      <!-- July -->
+      <section
+        id="JulyMonth2024"
+        class="container mx-auto text-center space-y-5 my-12"
+        data-aos="fade-in"
+      >
+        <h3 class="text-2xl font-semibold text-gray-800">July 2024</h3>
+        <div class="grid grid-cols-3 gap-4 mt-4">
+          <img
+            src="/images/gallery_image (38).webp"
+            alt="July Image 1"
+            class="rounded-md shadow-md"
+            data-aos="fade-in"
+          />
+          <img
+            src="/images/gallery_image (9).webp"
+            alt="July Image 2"
+            class="rounded-md shadow-md col-span-2"
+            data-aos="fade-in"
+          />
+          <img
+            src="/images/gallery_image (55).webp"
+            alt="July Image 3"
+            class="rounded-md shadow-md row-span-2"
+            data-aos="fade-in"
+          />
+          <img
+            src="/images/gallery_image (41).webp"
+            alt="July Image 4"
+            class="rounded-md shadow-md"
+            data-aos="fade-in"
+          />
+          <img
+            src="/images/gallery_image (2).webp"
+            alt="July Image 5"
+            class="rounded-md shadow-md"
+            data-aos="fade-in"
+          />
+          <img
+            src="/images/gallery_image (45).webp"
+            alt="July Image 6"
+            class="rounded-md shadow-md"
+            data-aos="fade-in"
+          />
+          <img
+            src="/images/gallery_image (37).webp"
+            alt="July Image 7"
+            class="rounded-md shadow-md"
+            data-aos="fade-in"
+          />
+          <img
+            src="/images/gallery_image (59).webp"
+            alt="July Image 8"
+            class="rounded-md shadow-md col-span-2"
+            data-aos="fade-in"
+          />
+          <img
+            src="/images/gallery_image (49).webp"
+            alt="July Image 9"
+            class="rounded-md shadow-md"
+            data-aos="fade-in"
+          />
+          <img
+            src="/images/gallery_image (12).webp"
+            alt="July Image 10"
+            class="rounded-md shadow-md"
+            data-aos="fade-in"
+          />
+          <img
+            src="/images/gallery_image (54).webp"
+            alt="July Image 11"
+            class="rounded-md shadow-md"
+            data-aos="fade-in"
+          />
+          <img
+            src="/images/gallery_image (22).webp"
+            alt="July Image 12"
+            class="rounded-md shadow-md row-span-2"
+            data-aos="fade-in"
+          />
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="bg-gray-800 text-white py-12 mt-3">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-col gap-7 md:flex-row justify-between">
+            <!-- Organization Info -->
+            <div class="mb-6 md:mb-0 w-full md:w-1/3">
+              <h3 class="text-xl font-bold mb-2">Sho Sho Fondation</h3>
+              <p class="text-gray-400">
+                Impacter des vies, répondre aux besoins.
+              </p>
+              <p class="text-gray-400 mt-4">
+                <strong>Adresse :</strong> 123 Charity Lane, Ville, Pays
+              </p>
+              <p class="text-gray-400 mt-2">
+                <strong>Téléphone :</strong> +123 456 7890
+              </p>
+              <p class="text-gray-400 mt-2">
+                <strong>Email :</strong> Shoshofoundation2024@gmail.com
+              </p>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="mb-6 md:mb-0 w-full md:w-1/3">
+              <h4 class="text-lg font-semibold mb-2">Liens Rapides</h4>
+              <ul class="space-y-5">
+                <li>
+                  <a
+                    href="/fr/index.html"
+                    class="hover:text-yellow-500 transition"
+                    >Accueil</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/fr/about.html"
+                    class="hover:text-yellow-500 transition"
+                    >À propos</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/fr/gallery.html"
+                    class="hover:text-yellow-500 transition"
+                    >Galerie</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/fr/donation.html"
+                    class="hover:text-yellow-500 transition"
+                    >Dons</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/fr/contact.html"
+                    class="hover:text-yellow-500 transition"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Website Info -->
+            <div class="mb-6 md:mb-0 w-full md:w-1/3">
+              <!-- Social Media Links -->
+              <div class="">
+                <h4 class="text-lg font-semibold mb-2">Suivez-nous</h4>
+                <div class="flex space-x-4">
+                  <a
+                    href="https://www.facebook.com/share/g/1Be3CuSHXf/?mibextid=K35XfP"
+                    class="hover:text-yellow-500 transition"
+                  >
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="#" class="hover:text-yellow-500 transition">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="#" class="hover:text-yellow-500 transition">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a
+                    href="https://chat.whatsapp.com/FGc4ScwdkGABjdPkWOONER"
+                    class="hover:text-yellow-500 transition"
+                  >
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </div>
+              </div>
+              <!-- Subscription Section -->
+              <div class="mt-6">
+                <h4 class="text-lg font-semibold mb-2">
+                  Abonnez-vous pour les mises à jour
+                </h4>
+                <p class="text-gray-400 mb-2">
+                  Recevez des notifications sur les événements à venir et les
+                  nouvelles !
+                </p>
+                <form
+                  id="subscribeForm"
+                  class="flex rounded-md"
+                  onsubmit="handleSubscriberSubmit(event)"
+                >
+                  <input
+                    type="email"
+                    id="emailInput"
+                    placeholder="Entrez votre email"
+                    class="p-2 rounded-l-md w-full text-gray-700"
+                    required
+                  />
+                  <button
+                    type="submit"
+                    onclick="handleSubscriberSubmit(event)"
+                    class="bg-logo-main hover:bg-logo-main/90 text-white p-2 rounded-r-md"
+                  >
+                    S'abonner
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Divider Line -->
+          <div class="border-t border-gray-700 my-6"></div>
+
+          <!-- Credits and Copyright -->
+          <div
+            class="flex flex-col md:flex-row justify-between text-gray-400 text-sm space-y-3"
+          >
+            <p>&copy; 2024 Sho Sho Fondation. Tous droits réservés.</p>
+            <p>
+              Conçu par
+              <a
+                href="https://afripulgroup.com"
+                class="text-blue-500 no-underline hover:underline-"
+                >Afripul Group</a
+              >
+            </p>
+          </div>
+        </div>
+      </footer>
+      <!-- Back to Top Button -->
+      <button
+        id="backToTopBtn"
+        class="hidden w-6 h-6 aspect-square box-content fixed bottom-5 text-center right-5 p-3 bg-blue-600 text-white rounded-full shadow-md transition-opacity hover:bg-blue-700"
+      >
+        <i class="fas fa-arrow-up size-4"></i>
+      </button>
+    </main>
+    <!-- Scripts  -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- AOS Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Toastify.js -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/41222511d0.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../scripts/scripts.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        new Splide("#hero-carousel", {
+          type: "fade",
+          autoplay: true,
+          interval: 5000,
+          pauseOnHover: true,
+          arrows: false,
+          pagination: true,
+        }).mount();
+      });
+    </script>
+  </body>
+</html>
