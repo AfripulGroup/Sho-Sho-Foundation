@@ -227,6 +227,8 @@
         </ul>
       </nav>
 
+
+
       <!-- Hero Carousel -->
       <section class="splide relative mb-14" id="hero-carousel">
         <!-- Display Text -->
@@ -249,14 +251,15 @@
               </a>
 
 
-              <a href="https://youtube.com/@shoshohelpinghandsfoundation?si=FFyKYbjZwcIIXCPU" target="_blanc"
-              style="background-color: red;"
+              <a href="./about.html" target="_blanc"
+              style="background-color:grey;"
               class="font-semibold px-6 py-3 rounded-full text-lg transition transform hover:scale-105">
-              YouTube
+              Learn More
           </a>
             </div>
           </div>
         </div>
+
         <!-- Hero carousel images -->
         <div class="splide__track">
           <ul class="splide__list">
@@ -295,7 +298,51 @@
           </ul>
         </div>
       </section>
+   <!-- /////////////////////////////////////////////////////////////////////////////// -->
+   <section class="flex items-center justify-center min-h-screen bg-gray-100">
+    <!-- Video Section with Overlay -->
+    <div id="video-container" class="relative w-3/4 max-w-2xl">
+      <!-- Video Element -->
+      <video id="promo-video" class="w-full rounded-lg" autoplay muted>
+        <source src="../video ad/IMG_3625.MP4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
 
+      <!-- Popup Card (Initially Hidden) -->
+      <div id="popup-card" class="hidden absolute inset-0 flex items-center justify-center bg-black bg-opacity-75 rounded-lg">
+        <div class=" bg-gray-100 p-6 rounded-lg shadow-lg text-center">
+          <h2 class="text-xl font-bold text-gray-800 mb-4">Enjoy Our Videos!</h2>
+          <p class="text-gray-600 mb-6">Subscribe to our YouTube channel for more amazing content.</p>
+          <a href="https://youtube.com/@shoshohelpinghandsfoundation?si=FFyKYbjZwcIIXCPU" target="_blank" class="bg-black text-white px-4 py-2 rounded-lg hover:bg-blue-600">
+            Watch on YouTube
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const video = document.getElementById("promo-video");
+      const popupCard = document.getElementById("popup-card");
+
+      // Play the video for 3 seconds and then show the popup
+      video.addEventListener("play", () => {
+        setTimeout(() => {
+          video.pause(); // Pause the video after 3 seconds
+          popupCard.classList.remove("hidden"); // Show the popup card
+        }, 3000); // 3000ms = 3 seconds
+      });
+
+      // Optional: Hide the popup card if the video is played again
+      video.addEventListener("play", () => {
+        popupCard.classList.add("hidden");
+      });
+    </script>
+  </section>
+
+
+
+
+   <!-- ////////// -->
       <!--Past Event Section with Scroll Animation -->
       <section class="container mx-auto px-4 py-12 my-14" id="pastEvents">
         <h2 class="text-3xl font-bold text-center mb-8 text-logo-main">
@@ -908,6 +955,7 @@
         },
         { threshold: 0.2 },
       );
+
 
       eventCards.forEach((card) => observer.observe(card));
     </script>
