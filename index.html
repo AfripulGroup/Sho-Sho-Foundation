@@ -173,46 +173,60 @@
         </ul>
       </div>
     </section>
+
     <section class="flex items-center justify-center min-h-screen bg-gray-100">
       <!-- Video Section with Overlay -->
       <div id="video-container" class="relative w-3/4 max-w-2xl">
         <!-- Video Element -->
-        <video id="promo-video" class="w-full rounded-lg" autoplay muted>
+        <video id="promo-video" class="w-full rounded-lg blur-md" autoplay muted>
           <source src="./video ad/1109725_Bench_Tenderness_1280x720.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
 
-        <!-- Popup Card (Initially Hidden) -->
-        <div id="popup-card" class="hidden absolute inset-0 flex items-center justify-center bg-black bg-opacity-75 rounded-lg">
-          <div class=" bg-gray-100 p-6 rounded-lg shadow-lg text-center">
-            <h2 class="text-xl font-bold text-gray-800 mb-4">Enjoy Our Videos!</h2>
-            <p class="text-gray-600 mb-6">Subscribe to our YouTube channel for more amazing content.</p>
-            <a href="https://youtube.com/@shoshohelpinghandsfoundation?si=FFyKYbjZwcIIXCPU" target="_blank" class="bg-black text-white px-4 py-2 rounded-lg hover:bg-blue-600">
-              Watch on YouTube
-            </a>
-          </div>
+        <!-- YouTube Logo and Overlay -->
+        <div
+          id="video-overlay"
+          class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-lg cursor-pointer"
+        >
+          <a
+            href="https://youtube.com/@shoshohelpinghandsfoundation?si=FFyKYbjZwcIIXCPU"
+            target="_blank"
+            class="relative"
+          >
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"
+              alt="YouTube Logo"
+              class="w-24 h-24"
+            />
+          </a>
         </div>
       </div>
 
       <script>
         const video = document.getElementById("promo-video");
-        const popupCard = document.getElementById("popup-card");
+        const videoOverlay = document.getElementById("video-overlay");
 
-        // Play the video for 3 seconds and then show the popup
-        video.addEventListener("play", () => {
-          setTimeout(() => {
-            video.pause(); // Pause the video after 3 seconds
-            popupCard.classList.remove("hidden"); // Show the popup card
-          }, 2000); // 3000ms = 3 seconds
+        // Show the overlay initially
+        videoOverlay.style.display = "flex";
+
+        // Play the video and remove the blur/overlay
+        videoOverlay.addEventListener("click", () => {
+          video.play();
+          video.classList.remove("blur-md");
+          videoOverlay.style.display = "none";
         });
 
-        // Optional: Hide the popup card if the video is played again
-        video.addEventListener("play", () => {
-          popupCard.classList.add("hidden");
+        // Show the YouTube logo overlay when the video ends
+        video.addEventListener("ended", () => {
+          video.classList.add("blur-md"); // Add blur back for the ended state
+          videoOverlay.style.display = "flex"; // Show the overlay again
         });
       </script>
     </section>
-    <!--Past  Event Section with Scroll Animation -->
+
+
+
+
     <section class="container mx-auto px-4 py-12 my-14" id="pastEvents">
       <h2 class="text-3xl font-bold text-center mb-8 text-logo-main">
         Past Events

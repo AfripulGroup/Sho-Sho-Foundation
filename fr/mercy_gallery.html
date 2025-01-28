@@ -1,19 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gallery</title>
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Fondation Sho Sho - Autonomiser les Communautés" />
+  <meta property="og:description" content="Rejoignez la Fondation Sho Sho pour transformer des vies et autonomiser les communautés grâce à l'éducation et au soutien." />
+  <meta property="og:image" content="https://example.com/images/home-og.jpg" />
+  <meta property="og:url" content="https://example.com/fr/index.html" />
+  <meta property="og:site_name" content="Fondation Sho Sho" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fondation Sho Sho - Autonomiser les Communautés" />
+  <meta name="twitter:description" content="Rejoignez la Fondation Sho Sho pour transformer des vies et autonomiser les communautés grâce à l'éducation et au soutien." />
+  <meta name="twitter:image" content="https://example.com/images/home-twitter.jpg" />
+
+  <title>Fondation Sho Sho</title>
+
+  <!-- External Stylesheets -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../dist/output.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+
   <style>
-    /* Page title styling */
     h1 {
       font-family: 'Arial', sans-serif;
       color: #4a90e2;
       font-weight: bold;
     }
 
-    /* Style for images */
     .gallery-img {
       border-radius: 10px;
       max-height: 300px;
@@ -31,52 +51,127 @@
       border-radius: 15px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
+
+    /* Mobile menu hidden by default */
+    #mobile-menu {
+      display: none;
+    }
+
+    /* Mobile menu visible when toggle is active */
+    #mobile-menu.active {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   </style>
+
 </head>
+
 <body>
-  <div class="container my-5 gallery-container">
-    <h1 class="text-center mb-4">Mercy Galerie</h1>
-    <div class="row g-4">
+  <main class="bg-gray-100 container-fluid px-auto transition-all">
 
-      <!-- Image 1 -->
-      <div class="col-12 col-sm-6 col-md-4">
-        <div class="card border-0">
-          <img src="./Mercy/1.JPG" class="card-img-top gallery-img" alt="Orphanage Image 1">
-          <div class="card-body text-center">
+    <!-- Navigation -->
+    <nav class="bg-blue-600 py-4 px-4 max-md:px-2">
+      <div class="container mx-auto flex justify-between items-center">
+        <a href="/fr/index.html" class="w-36 h-11 md:w-44 md:h-12 xl:w-48 xl:h-14">
+          <img src="/images/Sho-Sho.png" alt="Sho Sho Foundation Logo" class="object-cover object-center h-full w-full" />
+        </a>
 
-          </div>
-        </div>
+        <!-- Desktop Menu -->
+        <ul id="menu" class="flex max-md:hidden space-x-6 text-white">
+          <li><a href="/fr/index.html" class="hover:text-logo-tertiary transition font-medium active">Accueil</a></li>
+          <li><a href="/fr/about.html" class="hover:text-logo-tertiary transition font-medium">À propos</a></li>
+          <li><a href="/fr/gallery.html" class="hover:text-logo-tertiary transition font-medium">Galerie</a></li>
+          <li><a href="/fr/donation.html" class="hover:text-logo-tertiary transition font-medium">Dons</a></li>
+          <li><a href="/fr/contact.html" class="hover:text-logo-tertiary transition font-medium">Contact</a></li>
+          <li><a href="/index.html" class="hover:text-logo-tertiary transition font-medium mr-5">English</a></li>
+        </ul>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" id="menu-toggle" class="md:hidden text-white focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
       </div>
 
-      <!-- Image 2 -->
-      <div class="col-12 col-sm-6 col-md-4">
-        <div class="card border-0">
-          <img src="./Mercy/2.JPG" class="card-img-top gallery-img" alt="Orphanage Image 2">
-          <div class="card-body text-center">
+      <!-- Mobile Menu (Initially Hidden) -->
+      <ul id="mobile-menu" class="flex-col items-center text-white space-y-4">
+        <div class="border-t border-white/25 -700 my-1"></div>
+        <li><a href="/fr/index.html" class="hover:text-logo-tertiary transition font-medium active">Accueil</a></li>
+        <li><a href="/fr/about.html" class="hover:text-logo-tertiary transition font-medium">À propos</a></li>
+        <li><a href="/fr/gallery.html" class="hover:text-logo-tertiary transition font-medium">Galerie</a></li>
+        <li><a href="/fr/donation.html" class="hover:text-logo-tertiary transition font-medium">Dons</a></li>
+        <li><a href="/fr/contact.html" class="hover:text-logo-tertiary transition font-medium">Contact</a></li>
+        <li class="pt-7 border-t-2 border-white/25"><a href="/index.html" class="hover:text-logo-tertiary transition font-medium mt-2">English</a></li>
+      </ul>
+    </nav>
 
+    <!-- Gallery Section -->
+    <div class="container my-5 gallery-container">
+      <h1 class="text-center mb-4">Mercy Galerie</h1>
+      <div class="row g-4">
+
+        <!-- Image 1 -->
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="card border-0">
+            <img src="./Mercy/1.JPG" class="card-img-top gallery-img" alt="Orphanage Image 1" onclick="showImage('./Mercy/1.JPG')">
           </div>
         </div>
-      </div>
 
-      <!-- Image 3 -->
-      <div class="col-12 col-sm-6 col-md-4">
-        <div class="card border-0">
-          <img src="./Mercy/IMGL0369.JPG" class="card-img-top gallery-img" alt="Orphanage Image 3">
-          <div class="card-body text-center">
-
+        <!-- Image 2 -->
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="card border-0">
+            <img src="./Mercy/2.JPG" class="card-img-top gallery-img" alt="Orphanage Image 2" onclick="showImage('./Mercy/2.JPG')">
           </div>
         </div>
+
+        <!-- Image 3 -->
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="card border-0">
+            <img src="./Mercy/IMGL0369.JPG" class="card-img-top gallery-img" alt="Orphanage Image 3" onclick="showImage('./Mercy/IMGL0369.JPG')">
+          </div>
+        </div>
+
       </div>
 
-
-
-
+      <div class="text-center mt-5">
+        <a href="../index.html" class="btn btn-primary">Back to Orphanages</a>
+      </div>
     </div>
-    <div class="text-center mt-5">
-      <a href="../index.html" class="btn btn-primary">Back to Orphanages</a>
+
+    <!-- Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <img id="modalImage" src="" alt="Full View" class="img-fluid">
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+
+  </main>
+
+  <!-- JavaScript for Modal and Mobile Menu -->
+  <script>
+    // JavaScript to handle image modal
+    function showImage(src) {
+      document.getElementById('modalImage').src = src;
+      var myModal = new bootstrap.Modal(document.getElementById('imageModal'));
+      myModal.show();
+    }
+
+    // JavaScript for Mobile Menu Toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('active');
+    });
+  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
