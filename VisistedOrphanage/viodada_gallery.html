@@ -1,13 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gallery</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Sho Sho Foundation - Empowering Communities" />
-  <meta property="og:description" content="Join Sho Sho Foundation to transform lives and empower communities through education and support." />
+  <meta property="og:description"
+    content="Join Sho Sho Foundation to transform lives and empower communities through education and support." />
   <meta property="og:image" content="https://example.com/images/home-og.jpg" />
   <meta property="og:url" content="https://example.com/index.html" />
   <meta property="og:site_name" content="Sho Sho Foundation" />
@@ -15,7 +17,8 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Sho Sho Foundation - Empowering Communities" />
-  <meta name="twitter:description" content="Join Sho Sho Foundation to transform lives and empower communities through education and support." />
+  <meta name="twitter:description"
+    content="Join Sho Sho Foundation to transform lives and empower communities through education and support." />
   <meta name="twitter:image" content="https://example.com/images/home-twitter.jpg" />
 
   <title>Sho Sho Foundation</title>
@@ -23,7 +26,7 @@
   <!-- External Stylesheets -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="../dist/output.css" rel="stylesheet" />
   <link rel="stylesheet" href="../styles/style.css" />
   <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
@@ -31,7 +34,7 @@
   <style>
     /* Page title styling */
     h1 {
-      font-family: 'Arial', sans-serif;
+      font-family: "Arial", sans-serif;
       color: #4a90e2;
       font-weight: bold;
     }
@@ -56,163 +59,212 @@
     }
   </style>
 </head>
+
 <body>
-  <nav class="bg-blue-600 py-4 px-4 max-md:px-2">
-    <div class="container mx-auto flex justify-between items-center">
-      <a href="/index.html" class="w-36 h-11 md:w-44 md:h-12 xl:w-48 xl:h-14">
-        <img src="/images/Sho-Sho.png" alt="Sho Sho Foundation Logo" class="object-cover object-center h-full w-full" />
-      </a>
+  <main class="bg-gray-100 container-fluid px-auto transition-all">
+    <!-- Navigation Bar -->
+    <nav class="bg-blue-600 py-4 px-4 max-md:px-2">
+      <div class="container mx-auto flex justify-between items-center">
+        <a href="/index.html" class="w-36 h-11 md:w-44 md:h-12 xl:w-48 xl:h-14">
+          <img src="/images/Sho-Sho.png" alt="Sho Sho Foundation Logo"
+            class="object-cover object-center h-full w-full" />
+        </a>
 
-      <!-- Desktop Menu -->
-      <ul id="menu" class="flex max-md:hidden space-x-6 text-white">
-        <li><a href="/index.html" class="hover:text-logo-tertiary transition font-medium active">Home</a></li>
-        <li><a href="/about.html" class="hover:text-logo-tertiary transition font-medium">About</a></li>
-        <li><a href="/gallery.html" class="hover:text-logo-tertiary transition font-medium">Gallery</a></li>
-        <li><a href="/donation.html" class="hover:text-logo-tertiary transition font-medium">Donations</a></li>
-        <li><a href="/contact.html" class="hover:text-logo-tertiary transition font-medium">Contact</a></li>
-        <li><a href="/fr/index.html" class="hover:text-logo-tertiary transition font-medium mr-5">Français</a></li>
+        <!-- Desktop Menu -->
+        <ul id="menu" class="flex max-md:hidden space-x-6 text-white">
+          <li>
+            <a href="/index.html" class="hover:text-logo-tertiary transition font-medium active">Home</a>
+          </li>
+          <li>
+            <a href="/about.html" class="hover:text-logo-tertiary transition font-medium">About</a>
+          </li>
+          <li>
+            <a href="/gallery.html" class="hover:text-logo-tertiary transition font-medium">Gallery</a>
+          </li>
+          <li>
+            <a href="/donation.html" class="hover:text-logo-tertiary transition font-medium">Donations</a>
+          </li>
+          <li>
+            <a href="/contact.html" class="hover:text-logo-tertiary transition font-medium">Contact</a>
+          </li>
+          <li>
+            <a href="/fr/index.html" class="hover:text-logo-tertiary transition font-medium mr-5">Français</a>
+          </li>
+        </ul>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" id="menu-toggle" class="md:hidden text-white focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu (Initially Hidden) -->
+      <ul id="mobile-menu" class="flex-col items-center text-white space-y-4">
+        <div class="border-t border-white/25 -700 my-1"></div>
+        <li>
+          <a href="/index.html" class="hover:text-logo-tertiary transition font-medium active">Home</a>
+        </li>
+        <li>
+          <a href="/about.html" class="hover:text-logo-tertiary transition font-medium">About</a>
+        </li>
+        <li>
+          <a href="/gallery.html" class="hover:text-logo-tertiary transition font-medium">Gallery</a>
+        </li>
+        <li>
+          <a href="/donation.html" class="hover:text-logo-tertiary transition font-medium">Donations</a>
+        </li>
+        <li>
+          <a href="/contact.html" class="hover:text-logo-tertiary transition font-medium">Contact</a>
+        </li>
+        <li class="pt-7 border-t-2 border-white/25">
+          <a href="/fr/index.html" class="hover:text-logo-tertiary transition font-medium mt-2">Français</a>
+        </li>
       </ul>
+    </nav>
 
-      <!-- Mobile Menu Toggle Button -->
-      <button type="button" id="menu-toggle" class="md:hidden text-white focus:outline-none">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
-    </div>
-
-    <!-- Mobile Menu (Initially Hidden) -->
-    <ul id="mobile-menu" class="flex-col items-center text-white space-y-4">
-      <div class="border-t border-white/25 -700 my-1"></div>
-      <li><a href="/index.html" class="hover:text-logo-tertiary transition font-medium active">Home</a></li>
-      <li><a href="/about.html" class="hover:text-logo-tertiary transition font-medium">About</a></li>
-      <li><a href="/gallery.html" class="hover:text-logo-tertiary transition font-medium">Gallery</a></li>
-      <li><a href="/donation.html" class="hover:text-logo-tertiary transition font-medium">Donations</a></li>
-      <li><a href="/contact.html" class="hover:text-logo-tertiary transition font-medium">Contact</a></li>
-      <li class="pt-7 border-t-2 border-white/25">
-        <a href="/fr/index.html" class="hover:text-logo-tertiary transition font-medium mt-2">Français</a>
-      </li>
-    </ul>
-  </nav>
-
-
-  <div class="container my-5 gallery-container">
-    <h1 class="text-center mb-4">VIO DADA Gallery</h1>
-    <div class="row g-4">
-
-      <!-- Image 1 -->
-      <div class="col-12 col-sm-6 col-md-4">
-        <div class="card border-0">
-          <img src="./vio dada/1.JPG" class="card-img-top gallery-img" alt="Orphanage Image 1" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
-        </div>
-      </div>
-
-      <!-- Image 2 -->
-      <div class="col-12 col-sm-6 col-md-4">
-        <div class="card border-0">
-          <img src="./vio dada/2.JPG" class="card-img-top gallery-img" alt="Orphanage Image 2" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
-        </div>
-      </div>
-
-      <!-- Image 3 -->
-      <div class="col-12 col-sm-6 col-md-4">
-        <div class="card border-0">
-          <img src="./vio dada/3.JPG" class="card-img-top gallery-img" alt="Orphanage Image 3" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
-        </div>
-      </div>
-
-      <!-- Image 4 -->
-      <div class="col-12 col-sm-6 col-md-4">
-        <div class="card border-0">
-          <img src="./vio dada/4.JPG" class="card-img-top gallery-img" alt="Orphanage Image 4" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
-        </div>
-      </div>
-
-      <!-- Image 5 -->
-      <div class="col-12 col-sm-6 col-md-4">
-        <div class="card border-0">
-          <img src="./vio dada/5.JPG" class="card-img-top gallery-img" alt="Orphanage Image 5" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
-        </div>
-      </div>
-
-      <!-- Image 6 -->
-      <div class="col-12 col-sm-6 col-md-4">
-        <div class="card border-0">
-          <img src="./vio dada/6.JPG" class="card-img-top gallery-img" alt="Orphanage Image 6" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
-        </div>
-      </div>
-
-      <!-- Image 7 -->
-      <div class="col-12 col-sm-6 col-md-4">
-        <div class="card border-0">
-          <img src="./vio dada/7.JPG" class="card-img-top gallery-img" alt="Orphanage Image 7" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
-        </div>
-      </div>
-
-      <!-- Image 8 -->
-      <div class="col-12 col-sm-6 col-md-4">
-        <div class="card border-0">
-          <img src="./vio dada/8.JPG" class="card-img-top gallery-img" alt="Orphanage Image 8" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
-        </div>
-      </div>
-
-      <!-- Image 9 -->
-      <div class="col-12 col-sm-6 col-md-4">
-        <div class="card border-0">
-          <img src="./vio dada/9.JPG" class="card-img-top gallery-img" alt="Orphanage Image 9" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
-        </div>
-      </div>
-
-      <!-- Image 10 -->
-      <div class="col-12 col-sm-6 col-md-4">
-        <div class="card border-0">
-          <img src="./vio dada/10.JPG" class="card-img-top gallery-img" alt="Orphanage Image 10" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
-        </div>
-      </div>
-
-      <!-- Image 11 -->
-      <div class="col-12 col-sm-6 col-md-4">
-        <div class="card border-0">
-          <img src="./vio dada/11.JPG" class="card-img-top gallery-img" alt="Orphanage Image 11" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
-        </div>
-      </div>
-
-      <!-- Image 12 -->
-      <div class="col-12 col-sm-6 col-md-4">
-        <div class="card border-0">
-          <img src="./vio dada/12.JPG" class="card-img-top gallery-img" alt="Orphanage Image 12" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header border-0">
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <div class="container my-5 gallery-container">
+      <h1 class="text-center mb-4">VIO DADA Gallery</h1>
+      <div class="row g-4">
+        <!-- Image 1 -->
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="card border-0">
+            <img src="./vio dada/1.JPG" class="card-img-top gallery-img" alt="Orphanage Image 1" data-bs-toggle="modal"
+              data-bs-target="#imageModal" onclick="showImage(this.src)" />
           </div>
-          <div class="modal-body text-center">
-            <img id="modalImage" src="" class="img-fluid rounded" alt="Gallery Image">
+        </div>
+
+        <!-- Image 2 -->
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="card border-0">
+            <img src="./vio dada/2.JPG" class="card-img-top gallery-img" alt="Orphanage Image 2" data-bs-toggle="modal"
+              data-bs-target="#imageModal" onclick="showImage(this.src)" />
+          </div>
+        </div>
+
+        <!-- Image 3 -->
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="card border-0">
+            <img src="./vio dada/3.JPG" class="card-img-top gallery-img" alt="Orphanage Image 3" data-bs-toggle="modal"
+              data-bs-target="#imageModal" onclick="showImage(this.src)" />
+          </div>
+        </div>
+
+        <!-- Image 4 -->
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="card border-0">
+            <img src="./vio dada/4.JPG" class="card-img-top gallery-img" alt="Orphanage Image 4" data-bs-toggle="modal"
+              data-bs-target="#imageModal" onclick="showImage(this.src)" />
+          </div>
+        </div>
+
+        <!-- Image 5 -->
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="card border-0">
+            <img src="./vio dada/5.JPG" class="card-img-top gallery-img" alt="Orphanage Image 5" data-bs-toggle="modal"
+              data-bs-target="#imageModal" onclick="showImage(this.src)" />
+          </div>
+        </div>
+
+        <!-- Image 6 -->
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="card border-0">
+            <img src="./vio dada/6.JPG" class="card-img-top gallery-img" alt="Orphanage Image 6" data-bs-toggle="modal"
+              data-bs-target="#imageModal" onclick="showImage(this.src)" />
+          </div>
+        </div>
+
+        <!-- Image 7 -->
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="card border-0">
+            <img src="./vio dada/7.JPG" class="card-img-top gallery-img" alt="Orphanage Image 7" data-bs-toggle="modal"
+              data-bs-target="#imageModal" onclick="showImage(this.src)" />
+          </div>
+        </div>
+
+        <!-- Image 8 -->
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="card border-0">
+            <img src="./vio dada/8.JPG" class="card-img-top gallery-img" alt="Orphanage Image 8" data-bs-toggle="modal"
+              data-bs-target="#imageModal" onclick="showImage(this.src)" />
+          </div>
+        </div>
+
+        <!-- Image 9 -->
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="card border-0">
+            <img src="./vio dada/9.JPG" class="card-img-top gallery-img" alt="Orphanage Image 9" data-bs-toggle="modal"
+              data-bs-target="#imageModal" onclick="showImage(this.src)" />
+          </div>
+        </div>
+
+        <!-- Image 10 -->
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="card border-0">
+            <img src="./vio dada/10.JPG" class="card-img-top gallery-img" alt="Orphanage Image 10"
+              data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)" />
+          </div>
+        </div>
+
+        <!-- Image 11 -->
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="card border-0">
+            <img src="./vio dada/11.JPG" class="card-img-top gallery-img" alt="Orphanage Image 11"
+              data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)" />
+          </div>
+        </div>
+
+        <!-- Image 12 -->
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="card border-0">
+            <img src="./vio dada/12.JPG" class="card-img-top gallery-img" alt="Orphanage Image 12"
+              data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)" />
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="text-center mt-5">
-      <a href="../index.html" class="btn btn-primary">Back to Orphanages</a>
-    </div>
-  </div>
+      <!-- Modal -->
+      <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header border-0">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <img id="modalImage" src="" class="img-fluid rounded" alt="Gallery Image" />
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <div class="text-center mt-5">
+        <a href="../index.html" class="btn btn-primary">Back to Orphanages</a>
+      </div>
+    </div>
+  </main>
   <script>
     // JavaScript to handle image modal
     function showImage(src) {
-      document.getElementById('modalImage').src = src;
+      document.getElementById("modalImage").src = src;
     }
+
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+      // Handle Navigation Functionality
+      const menuBtn = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        console.log("clicked");
+        mobileMenu.classList.toggle("show"); // Toggle show to display menu
+      });
+    });
+
   </script>
-
-
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
