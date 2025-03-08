@@ -11,5 +11,8 @@
     "prettier": "^3.4.1",
     "prettier-plugin-tailwindcss": "^0.6.9",
     "tailwindcss": "^3.4.15"
+  },
+  "dependencies": {
+    "sho-sho_foundation": "file:"
   }
 }
